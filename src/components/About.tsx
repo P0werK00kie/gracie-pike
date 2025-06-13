@@ -1,78 +1,108 @@
 
-import { Heart, Star, Zap } from 'lucide-react';
+import { Award, Users, Clock } from 'lucide-react';
 
 const About = () => {
-  const values = [
+  const achievements = [
     {
-      icon: Heart,
-      title: "Passion-Driven",
-      description: "Every project is infused with genuine passion and creative energy"
+      icon: Award,
+      title: "Excellence",
+      description: "Recognized for outstanding creative work and client satisfaction"
     },
     {
-      icon: Star,
-      title: "Excellence First",
-      description: "Commitment to delivering exceptional quality in every detail"
+      icon: Users,
+      title: "Collaboration",
+      description: "Building lasting partnerships through trust and exceptional service"
     },
     {
-      icon: Zap,
-      title: "Innovation",
-      description: "Pushing boundaries with fresh ideas and cutting-edge approaches"
+      icon: Clock,
+      title: "Heritage",
+      description: "Timeless design principles rooted in classical artistic traditions"
     }
   ];
 
   return (
-    <section id="about" className="py-20 bg-white relative overflow-hidden">
-      {/* Background Decoration */}
-      <div className="absolute top-0 right-0 w-64 h-64 bg-gradient-to-bl from-pink-100 to-transparent rounded-full opacity-50"></div>
-      <div className="absolute bottom-0 left-0 w-48 h-48 bg-gradient-to-tr from-purple-100 to-transparent rounded-full opacity-50"></div>
+    <section id="about" className="py-24 bg-background relative overflow-hidden">
+      {/* Background decorative elements */}
+      <div className="absolute top-0 right-0 w-64 h-64 border border-amber-200 opacity-10 rotate-12"></div>
+      <div className="absolute bottom-0 left-0 w-48 h-48 bg-burgundy-900 opacity-5 rotate-45"></div>
       
       <div className="container mx-auto px-6 relative z-10">
-        <div className="grid lg:grid-cols-2 gap-16 items-center">
+        <div className="grid lg:grid-cols-2 gap-20 items-center">
           {/* Left Content */}
-          <div>
-            <h2 className="text-4xl md:text-5xl font-bold mb-6 text-gray-800">
-              Hello, I'm a
-              <span className="block bg-gradient-to-r from-pink-600 to-purple-600 bg-clip-text text-transparent">
-                Creative Visionary
-              </span>
+          <div className="space-y-8">
+            {/* Ornamental line */}
+            <div className="w-24 h-0.5 bg-amber-400"></div>
+            
+            <h2 className="text-5xl md:text-6xl font-display font-bold text-burgundy-900 leading-tight">
+              Artisan of
+              <span className="block text-amber-600">Visual Stories</span>
             </h2>
             
-            <p className="text-lg text-gray-600 mb-8 leading-relaxed">
-              With a passion for transforming ideas into stunning visual narratives, 
-              I specialize in creating unique digital experiences that resonate with 
-              audiences and drive meaningful connections.
-            </p>
+            <div className="space-y-6 font-serif text-lg leading-relaxed text-muted-foreground">
+              <p>
+                With a profound appreciation for classical aesthetics and contemporary innovation, 
+                I specialize in creating visual narratives that transcend fleeting trends to 
+                achieve timeless elegance.
+              </p>
+              
+              <p>
+                My approach marries the sophisticated principles of traditional artistry with 
+                modern techniques, ensuring each project resonates with both heritage and 
+                contemporary relevance.
+              </p>
+              
+              <p>
+                Every collaboration begins with understanding your unique story, values, and 
+                aspirations, translating them into visual expressions that captivate and endure.
+              </p>
+            </div>
             
-            <p className="text-lg text-gray-600 mb-8 leading-relaxed">
-              My approach blends artistic intuition with strategic thinking, ensuring 
-              every project not only looks beautiful but also serves its purpose effectively.
-            </p>
-            
-            <button className="bg-gradient-to-r from-pink-500 to-purple-600 text-white px-6 py-3 rounded-full font-semibold hover:scale-105 transition-transform duration-300 shadow-lg">
-              Download Resume
+            <button className="bg-burgundy-900 text-background px-8 py-3 font-medium hover:bg-burgundy-800 transition-colors duration-300 shadow-lg tracking-wide">
+              Download Portfolio
             </button>
           </div>
           
-          {/* Right Content - Values */}
-          <div className="space-y-8">
-            {values.map((value, index) => (
-              <div 
-                key={index}
-                className="flex items-start space-x-4 p-6 rounded-2xl bg-gradient-to-r from-pink-50 to-purple-50 hover:shadow-lg transition-shadow duration-300"
-              >
-                <div className="flex-shrink-0 w-12 h-12 bg-gradient-to-r from-pink-500 to-purple-600 rounded-xl flex items-center justify-center">
-                  <value.icon className="w-6 h-6 text-white" />
-                </div>
-                <div>
-                  <h3 className="text-xl font-semibold text-gray-800 mb-2">
-                    {value.title}
-                  </h3>
-                  <p className="text-gray-600 leading-relaxed">
-                    {value.description}
-                  </p>
-                </div>
+          {/* Right Content - Portrait and Achievements */}
+          <div className="space-y-12">
+            {/* Portrait Section */}
+            <div className="relative">
+              <div className="aspect-[3/4] bg-gradient-to-br from-burgundy-50 to-amber-50 luxury-shadow border border-amber-200 overflow-hidden relative">
+                <img 
+                  src="https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7?auto=format&fit=crop&w=500&q=80"
+                  alt="Creative professional portrait"
+                  className="w-full h-full object-cover"
+                />
+                <div className="absolute inset-0 bg-burgundy-900/10"></div>
               </div>
-            ))}
+              
+              {/* Decorative frame */}
+              <div className="absolute -bottom-4 -right-4 w-full h-full border-2 border-amber-400 -z-10"></div>
+              
+              {/* Floating accent */}
+              <div className="absolute -top-6 -left-6 w-16 h-16 bg-burgundy-900 opacity-10 rotate-45"></div>
+            </div>
+            
+            {/* Achievements */}
+            <div className="space-y-6">
+              {achievements.map((achievement, index) => (
+                <div 
+                  key={index}
+                  className="flex items-start space-x-6 p-6 bg-card border border-amber-200 luxury-shadow hover:shadow-lg transition-shadow duration-300"
+                >
+                  <div className="flex-shrink-0 w-12 h-12 bg-gradient-to-br from-burgundy-900 to-burgundy-800 flex items-center justify-center">
+                    <achievement.icon className="w-6 h-6 text-background" />
+                  </div>
+                  <div>
+                    <h3 className="text-xl font-display font-semibold text-burgundy-900 mb-2">
+                      {achievement.title}
+                    </h3>
+                    <p className="text-muted-foreground leading-relaxed font-serif">
+                      {achievement.description}
+                    </p>
+                  </div>
+                </div>
+              ))}
+            </div>
           </div>
         </div>
       </div>

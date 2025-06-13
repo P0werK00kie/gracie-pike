@@ -1,5 +1,5 @@
 
-import { ArrowDown, Sparkles } from 'lucide-react';
+import { ArrowDown } from 'lucide-react';
 
 const Hero = () => {
   const scrollToAbout = () => {
@@ -10,63 +10,96 @@ const Hero = () => {
   };
 
   return (
-    <section className="min-h-screen relative overflow-hidden bg-gradient-to-br from-pink-50 via-purple-50 to-blue-50">
-      {/* Decorative Elements */}
-      <div className="absolute top-20 left-10 w-32 h-32 bg-pink-200 rounded-full opacity-20 animate-pulse"></div>
-      <div className="absolute top-40 right-20 w-24 h-24 bg-purple-200 rounded-full opacity-30 animate-bounce delay-1000"></div>
-      <div className="absolute bottom-32 left-20 w-20 h-20 bg-blue-200 rounded-full opacity-25 animate-pulse delay-500"></div>
+    <section className="min-h-screen relative overflow-hidden bg-background classical-texture">
+      {/* Decorative classical elements */}
+      <div className="absolute top-20 left-10 w-40 h-40 border border-amber-200 rounded-none opacity-20 rotate-45"></div>
+      <div className="absolute bottom-32 right-20 w-32 h-32 border border-burgundy-200 rounded-none opacity-15 -rotate-12"></div>
+      <div className="absolute top-1/2 left-20 w-2 h-32 bg-amber-400 opacity-20"></div>
       
       {/* Main Content */}
       <div className="container mx-auto px-6 pt-32 pb-20 relative z-10">
-        <div className="text-center max-w-4xl mx-auto">
-          {/* Sparkle Icon */}
-          <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-r from-pink-500 to-purple-500 rounded-full mb-8 animate-spin-slow">
-            <Sparkles className="w-8 h-8 text-white" />
+        <div className="grid lg:grid-cols-2 gap-16 items-center min-h-[80vh]">
+          {/* Left Content */}
+          <div className="space-y-8 animate-elegant-entrance">
+            {/* Ornamental top line */}
+            <div className="w-24 h-0.5 bg-amber-400 mb-8"></div>
+            
+            {/* Main Heading */}
+            <h1 className="text-6xl md:text-7xl font-display font-bold leading-tight">
+              <span className="block text-burgundy-900 mb-2">Timeless</span>
+              <span className="block text-foreground">Elegance</span>
+              <span className="block text-amber-600 text-5xl md:text-6xl mt-2">& Artistry</span>
+            </h1>
+            
+            {/* Subheading */}
+            <p className="text-xl md:text-2xl text-muted-foreground leading-relaxed max-w-xl font-serif">
+              Where classical sophistication meets contemporary creativity. 
+              Crafting bespoke visual narratives with timeless appeal.
+            </p>
+            
+            {/* CTA Buttons */}
+            <div className="flex flex-col sm:flex-row gap-6 pt-8">
+              <button 
+                onClick={() => document.querySelector('#portfolio')?.scrollIntoView({ behavior: 'smooth' })}
+                className="bg-burgundy-900 text-background px-10 py-4 font-medium hover:bg-burgundy-800 transition-all duration-300 shadow-lg hover:shadow-xl tracking-wide"
+              >
+                View Portfolio
+              </button>
+              <button 
+                onClick={() => document.querySelector('#contact')?.scrollIntoView({ behavior: 'smooth' })}
+                className="border-2 border-burgundy-700 text-burgundy-700 px-10 py-4 font-medium hover:bg-burgundy-700 hover:text-background transition-all duration-300 tracking-wide"
+              >
+                Collaborate
+              </button>
+            </div>
           </div>
           
-          {/* Main Heading */}
-          <h1 className="text-5xl md:text-7xl font-bold mb-6 leading-tight">
-            <span className="block text-gray-800">Creative</span>
-            <span className="block bg-gradient-to-r from-pink-600 via-purple-600 to-blue-600 bg-clip-text text-transparent">
-              Portfolio
-            </span>
-          </h1>
-          
-          {/* Subheading */}
-          <p className="text-xl md:text-2xl text-gray-600 mb-8 leading-relaxed max-w-2xl mx-auto">
-            Where imagination meets excellence. Crafting unique digital experiences 
-            that inspire and captivate.
-          </p>
-          
-          {/* CTA Buttons */}
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-16">
-            <button 
-              onClick={() => document.querySelector('#portfolio')?.scrollIntoView({ behavior: 'smooth' })}
-              className="bg-gradient-to-r from-pink-500 to-purple-600 text-white px-8 py-4 rounded-full font-semibold hover:scale-105 transition-transform duration-300 shadow-lg hover:shadow-xl"
-            >
-              View My Work
-            </button>
-            <button 
-              onClick={() => document.querySelector('#contact')?.scrollIntoView({ behavior: 'smooth' })}
-              className="border-2 border-gray-300 text-gray-700 px-8 py-4 rounded-full font-semibold hover:border-pink-500 hover:text-pink-600 transition-all duration-300"
-            >
-              Get In Touch
-            </button>
+          {/* Right Content - Featured Image Space */}
+          <div className="relative">
+            {/* Main featured image placeholder */}
+            <div className="relative group">
+              <div className="aspect-[4/5] bg-gradient-to-br from-burgundy-100 to-amber-50 luxury-shadow border border-amber-200 relative overflow-hidden">
+                <img 
+                  src="https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7?auto=format&fit=crop&w=600&q=80"
+                  alt="Featured creative work"
+                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+                />
+                <div className="absolute inset-0 bg-burgundy-900/10 group-hover:bg-burgundy-900/5 transition-colors duration-300"></div>
+              </div>
+              
+              {/* Decorative frame */}
+              <div className="absolute -top-4 -left-4 w-full h-full border-2 border-amber-400 -z-10"></div>
+            </div>
+            
+            {/* Secondary images */}
+            <div className="absolute -bottom-8 -right-8 w-32 h-32 bg-gradient-to-br from-amber-100 to-burgundy-50 luxury-shadow border border-burgundy-200 overflow-hidden">
+              <img 
+                src="https://images.unsplash.com/photo-1470813740244-df37b8c1edcb?auto=format&fit=crop&w=300&q=80"
+                alt="Creative detail"
+                className="w-full h-full object-cover"
+              />
+            </div>
+            
+            {/* Floating decorative element */}
+            <div className="absolute top-8 -left-8 w-20 h-20 border border-amber-400 rotate-45 opacity-40"></div>
           </div>
-          
-          {/* Scroll Indicator */}
+        </div>
+        
+        {/* Scroll Indicator */}
+        <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 text-center">
           <button 
             onClick={scrollToAbout}
-            className="animate-bounce cursor-pointer hover:text-pink-600 transition-colors duration-300"
+            className="text-burgundy-700 hover:text-burgundy-900 transition-colors duration-300 flex flex-col items-center space-y-2"
           >
-            <ArrowDown size={32} className="mx-auto" />
+            <span className="text-sm tracking-wider font-medium">Discover More</span>
+            <ArrowDown size={24} className="animate-bounce" />
           </button>
         </div>
       </div>
       
-      {/* Creative Wave Divider */}
+      {/* Classical wave divider */}
       <div className="absolute bottom-0 left-0 right-0">
-        <svg viewBox="0 0 1440 120" className="w-full h-20 fill-white">
+        <svg viewBox="0 0 1440 120" className="w-full h-20 fill-background">
           <path d="M0,60 C240,100 480,20 720,60 C960,100 1200,20 1440,60 L1440,120 L0,120 Z"></path>
         </svg>
       </div>
