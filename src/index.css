@@ -8,43 +8,43 @@
 
 @layer base {
   :root {
-    --background: 30 15% 97%; /* Warm cream */
+    --background: 30 15% 92%; /* Softer warm cream - reduced from 97% to 92% */
     --foreground: 210 20% 15%; /* Charcoal gray */
 
-    --card: 30 15% 98%;
+    --card: 30 15% 94%; /* Softer card background - reduced from 98% to 94% */
     --card-foreground: 210 20% 15%;
 
-    --popover: 30 15% 98%;
+    --popover: 30 15% 94%; /* Adjusted to match cards */
     --popover-foreground: 210 20% 15%;
 
-    --primary: 345 90% 25%; /* Deep burgundy */
+    --primary: 345 90% 25%; /* Deep burgundy - unchanged */
     --primary-foreground: 30 15% 97%;
 
-    --secondary: 45 85% 42%; /* Rich gold */
+    --secondary: 45 85% 42%; /* Rich gold - unchanged */
     --secondary-foreground: 210 20% 15%;
 
-    --muted: 30 10% 92%;
+    --muted: 30 10% 88%; /* Slightly darker muted - reduced from 92% to 88% */
     --muted-foreground: 210 10% 45%;
 
-    --accent: 220 50% 20%; /* Navy blue */
+    --accent: 220 50% 20%; /* Navy blue - unchanged */
     --accent-foreground: 30 15% 97%;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 210 40% 98%;
 
-    --border: 30 20% 88%;
-    --input: 30 20% 88%;
+    --border: 30 20% 84%; /* Slightly darker border - reduced from 88% to 84% */
+    --input: 30 20% 84%; /* Matching input background */
     --ring: 345 90% 25%;
 
     --radius: 0.25rem; /* Reduced for classical look */
 
-    --sidebar-background: 30 15% 96%;
+    --sidebar-background: 30 15% 90%; /* Softer sidebar - reduced from 96% to 90% */
     --sidebar-foreground: 210 20% 15%;
     --sidebar-primary: 345 90% 25%;
     --sidebar-primary-foreground: 30 15% 97%;
-    --sidebar-accent: 30 10% 92%;
+    --sidebar-accent: 30 10% 88%;
     --sidebar-accent-foreground: 210 20% 15%;
-    --sidebar-border: 30 20% 88%;
+    --sidebar-border: 30 20% 84%;
     --sidebar-ring: 345 90% 25%;
   }
 
