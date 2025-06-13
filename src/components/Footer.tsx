@@ -1,12 +1,11 @@
-
-import { Heart, Instagram, Twitter, Dribbble, Behance } from 'lucide-react';
+import { Heart, Instagram, Twitter, Dribbble, Globe } from 'lucide-react';
 
 const Footer = () => {
   const socialLinks = [
     { icon: Instagram, href: "https://instagram.com", label: "Instagram" },
     { icon: Twitter, href: "https://twitter.com", label: "Twitter" },
     { icon: Dribbble, href: "https://dribbble.com", label: "Dribbble" },
-    { icon: Behance, href: "https://behance.net", label: "Behance" }
+    { icon: Globe, href: "https://behance.net", label: "Portfolio" }
   ];
 
   const scrollToTop = () => {
