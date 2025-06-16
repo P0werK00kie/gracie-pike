@@ -26,15 +26,15 @@ const Hero = () => {
             
             {/* Main Heading */}
             <h1 className="text-6xl md:text-7xl font-display font-bold leading-tight">
-              <span className="block text-burgundy-900 mb-2">Timeless</span>
-              <span className="block text-foreground">Elegance</span>
-              <span className="block text-amber-600 text-5xl md:text-6xl mt-2">& Artistry</span>
+              <span className="block text-burgundy-900 mb-2">Lorem</span>
+              <span className="block text-foreground">ipsum</span>
+              <span className="block text-amber-600 text-5xl md:text-6xl mt-2">dolor</span>
             </h1>
             
             {/* Subheading */}
             <p className="text-xl md:text-2xl text-muted-foreground leading-relaxed max-w-xl font-serif">
-              Where classical sophistication meets contemporary creativity. 
-              Crafting bespoke visual narratives with timeless appeal.
+              Vestibulum faucibus blandit dui. Pellentesque habitant morbi tristique
+              senectus et netus et malesuada fames ac turpis egestas.            
             </p>
             
             {/* CTA Buttons */}
