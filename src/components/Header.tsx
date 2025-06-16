@@ -42,7 +42,7 @@ const Header = () => {
           <div className="flex-1 md:flex-none text-center">
             <h1 className="text-3xl md:text-4xl font-display font-bold text-burgundy-900 tracking-wide">
               <span className="relative">
-                Creative Studio
+                Gracie Albury
                 <div className="absolute -bottom-2 left-1/2 transform -translate-x-1/2 w-16 h-0.5 bg-amber-400"></div>
               </span>
             </h1>
