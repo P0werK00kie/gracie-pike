@@ -10,43 +10,43 @@ const Portfolio = () => {
   const projects = [
     {
       id: 1,
-      title: "Heritage Brand Revival",
+      title: "Lorem ipsum dolor sit amet",
       category: "Branding",
       images: [
         "photo-1487058792275-0ad4aaf24ca7",
         "photo-1493397212122-2b85dda8106b"
       ],
-      description: "Complete brand transformation for a century-old establishment, blending heritage with contemporary elegance."
+      description: "Vestibulum faucibus blandit dui. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum faucibus blandit dui. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. "
     },
     {
       id: 2,
-      title: "Architectural Photography Series",
+      title: "Lorem ipsum dolor sit amet",
       category: "Photography",
       images: [
         "photo-1433086966358-54859d0ed716",
         "photo-1470813740244-df37b8c1edcb"
       ],
-      description: "Capturing the soul of classical architecture through contemporary photographic techniques."
+      description: "Vestibulum faucibus blandit dui. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. "
     },
     {
       id: 3,
-      title: "Luxury Product Showcase",
+      title: "Lorem ipsum dolor sit amet",
       category: "Photography",
       images: [
         "photo-1487887235947-a955ef187fcc",
         "photo-1526374965328-7f61d4dc18c5"
       ],
-      description: "Elegant product photography that emphasizes craftsmanship and luxury appeal."
+      description: "Lorem ipsum dolor sit amet"
     },
     {
       id: 4,
-      title: "Classical Web Experience",
+      title: "Lorem ipsum dolor sit amet",
       category: "Web Design",
       images: [
         "photo-1493397212122-2b85dda8106b",
         "photo-1487058792275-0ad4aaf24ca7"
       ],
-      description: "Sophisticated digital experience combining classical aesthetics with modern functionality."
+      description: "Vestibulum faucibus blandit dui. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. "
     },
     {
       id: 5,
@@ -56,11 +56,11 @@ const Portfolio = () => {
         "photo-1470813740244-df37b8c1edcb",
         "photo-1433086966358-54859d0ed716"
       ],
-      description: "Original digital artwork exploring the intersection of classical and contemporary artistic expression."
+      description: "Vestibulum faucibus blandit dui. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. "
     },
     {
       id: 6,
-      title: "Corporate Identity System",
+      title: "Lorem ipsum dolor sit amet",
       category: "Branding",
       images: [
         "photo-1526374965328-7f61d4dc18c5",
