@@ -119,13 +119,6 @@ const Portfolio = () => {
             </div>
           ))}
         </div>
-        
-        {/* View More Button */}
-        <div className="text-center mt-16">
-          <button className="bg-gradient-to-r from-burgundy-900 to-burgundy-800 text-background px-12 py-4 font-medium hover:from-burgundy-800 hover:to-burgundy-700 transition-all duration-300 shadow-lg hover:shadow-xl tracking-wide">
-            View Complete Portfolio
-          </button>
-        </div>
       </div>
     </section>
   );
