@@ -8,7 +8,6 @@ const Header = () => {
   const navItems = [
     { label: 'About', href: '#about' },
     { label: 'Portfolio', href: '#portfolio' },
-    { label: 'Services', href: '#services' },
     { label: 'Contact', href: '#contact' }
   ];
 
@@ -24,33 +23,19 @@ const Header = () => {
     <header className="fixed top-0 left-0 right-0 z-50 bg-background/95 backdrop-blur-sm border-b border-amber-200">
       <div className="container mx-auto px-6 py-5">
         <div className="flex items-center justify-between">
-          {/* Left Navigation */}
-          <nav className="hidden md:flex space-x-10">
-            {navItems.slice(0, 2).map((item) => (
-              <button
-                key={item.label}
-                onClick={() => scrollToSection(item.href)}
-                className="text-foreground hover:text-burgundy-700 transition-colors duration-300 font-medium text-lg tracking-wide relative group"
-              >
-                {item.label}
-                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-amber-400 transition-all duration-300 group-hover:w-full"></span>
-              </button>
-            ))}
-          </nav>
-
-          {/* Centered Logo */}
-          <div className="flex-1 md:flex-none text-center">
+          {/* Left - Logo */}
+          <div className="text-left">
             <h1 className="text-3xl md:text-4xl font-display font-bold text-burgundy-900 tracking-wide">
               <span className="relative">
                 Gracie Albury
-                <div className="absolute -bottom-2 left-1/2 transform -translate-x-1/2 w-16 h-0.5 bg-amber-400"></div>
+                <div className="absolute -bottom-2 left-0 w-16 h-0.5 bg-amber-400"></div>
               </span>
             </h1>
           </div>
 
-          {/* Right Navigation */}
+          {/* Right - Navigation */}
           <nav className="hidden md:flex space-x-10">
-            {navItems.slice(2).map((item) => (
+            {navItems.map((item) => (
               <button
                 key={item.label}
                 onClick={() => scrollToSection(item.href)}

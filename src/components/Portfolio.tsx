@@ -1,12 +1,7 @@
 
 import { ExternalLink, Eye, ChevronRight } from 'lucide-react';
-import { useState } from 'react';
 
 const Portfolio = () => {
-  const [selectedCategory, setSelectedCategory] = useState('All');
-  
-  const categories = ['All', 'Branding', 'Photography', 'Digital Art', 'Web Design'];
-  
   const projects = [
     {
       id: 1,
@@ -70,10 +65,6 @@ const Portfolio = () => {
     }
   ];
 
-  const filteredProjects = selectedCategory === 'All' 
-    ? projects 
-    : projects.filter(project => project.category === selectedCategory);
-
   return (
     <section id="portfolio" className="py-24 bg-gradient-to-br from-background to-amber-50/30 relative overflow-hidden">
       {/* Background decorations */}
@@ -93,27 +84,10 @@ const Portfolio = () => {
             the marriage of classical elegance with contemporary innovation.
           </p>
         </div>
-
-        {/* Category Filter */}
-        <div className="flex flex-wrap justify-center gap-4 mb-16">
-          {categories.map((category) => (
-            <button
-              key={category}
-              onClick={() => setSelectedCategory(category)}
-              className={`px-6 py-3 font-medium transition-all duration-300 border ${
-                selectedCategory === category
-                  ? 'bg-burgundy-900 text-background border-burgundy-900'
-                  : 'text-burgundy-700 border-burgundy-300 hover:border-burgundy-700 hover:text-burgundy-900'
-              }`}
-            >
-              {category}
-            </button>
-          ))}
-        </div>
         
         {/* Portfolio Grid */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {filteredProjects.map((project, index) => (
+          {projects.map((project, index) => (
             <div 
               key={project.id}
               className="group bg-card luxury-shadow hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 border border-amber-200 animate-elegant-entrance"
