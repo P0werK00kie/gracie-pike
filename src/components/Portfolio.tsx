@@ -30,7 +30,9 @@ const Portfolio = () => {
       images: [
         "photo-1487887235947-a955ef187fcc",
         "photo-1526374965328-7f61d4dc18c5"
-      ]
+      ],
+      description: "Lorem ipsum dolor sit amet"
+    }
   ];
 
   return (
