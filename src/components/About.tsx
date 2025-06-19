@@ -68,7 +68,7 @@ const About = () => {
             <div className="relative">
               <div className="aspect-[3/4] bg-gradient-to-br from-burgundy-50 to-amber-50 luxury-shadow border border-amber-200 overflow-hidden relative">
                 <img 
-                  src="https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7?auto=format&fit=crop&w=500&q=80"
+                  src="https://wbuiebxqdjuxhvdtiata.supabase.co/storage/v1/object/sign/files/GECON/Brokers/Filler%20Image/Filler.jpg?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV9jMjU3NzlmNC01ZjdjLTRjZWEtYmM2MS1mYjMwZjllNzkxM2EiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJmaWxlcy9HRUNPTi9Ccm9rZXJzL0ZpbGxlciBJbWFnZS9GaWxsZXIuanBnIiwiaWF0IjoxNzUwMzUxMTQ4LCJleHAiOjIzODEwNzExNDh9.mNmjblQw3Kd5ewDrJnBdHzbbc2BvOFhJjYPgCyJo3PA"
                   alt="Creative professional portrait"
                   className="w-full h-full object-cover"
                 />

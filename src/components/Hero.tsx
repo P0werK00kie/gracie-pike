@@ -60,7 +60,7 @@ const Hero = () => {
             <div className="relative group">
               <div className="aspect-[4/5] bg-gradient-to-br from-burgundy-100 to-amber-50 luxury-shadow border border-amber-200 relative overflow-hidden">
                 <img 
-                  src="https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7?auto=format&fit=crop&w=600&q=80"
+                  src="https://wbuiebxqdjuxhvdtiata.supabase.co/storage/v1/object/sign/files/GECON/Brokers/Filler%20Image/Filler.jpg?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV9jMjU3NzlmNC01ZjdjLTRjZWEtYmM2MS1mYjMwZjllNzkxM2EiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJmaWxlcy9HRUNPTi9Ccm9rZXJzL0ZpbGxlciBJbWFnZS9GaWxsZXIuanBnIiwiaWF0IjoxNzUwMzUxMTQ4LCJleHAiOjIzODEwNzExNDh9.mNmjblQw3Kd5ewDrJnBdHzbbc2BvOFhJjYPgCyJo3PA"
                   alt="Featured creative work"
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
                 />
@@ -74,7 +74,7 @@ const Hero = () => {
             {/* Secondary images */}
             <div className="absolute -bottom-8 -right-8 w-32 h-32 bg-gradient-to-br from-amber-100 to-burgundy-50 luxury-shadow border border-burgundy-200 overflow-hidden">
               <img 
-                src="https://images.unsplash.com/photo-1470813740244-df37b8c1edcb?auto=format&fit=crop&w=300&q=80"
+                src="https://wbuiebxqdjuxhvdtiata.supabase.co/storage/v1/object/sign/files/GECON/Brokers/Filler%20Image/Filler.jpg?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV9jMjU3NzlmNC01ZjdjLTRjZWEtYmM2MS1mYjMwZjllNzkxM2EiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJmaWxlcy9HRUNPTi9Ccm9rZXJzL0ZpbGxlciBJbWFnZS9GaWxsZXIuanBnIiwiaWF0IjoxNzUwMzUxMTQ4LCJleHAiOjIzODEwNzExNDh9.mNmjblQw3Kd5ewDrJnBdHzbbc2BvOFhJjYPgCyJo3PA"
                 alt="Creative detail"
                 className="w-full h-full object-cover"
               />

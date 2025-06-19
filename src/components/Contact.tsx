@@ -189,14 +189,14 @@ const Contact = () => {
               <div className="grid grid-cols-2 gap-4 mb-6">
                 <div className="aspect-square bg-burgundy-700 overflow-hidden">
                   <img 
-                    src="https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7?auto=format&fit=crop&w=300&q=80"
+                    src="https://wbuiebxqdjuxhvdtiata.supabase.co/storage/v1/object/sign/files/GECON/Brokers/Filler%20Image/Filler.jpg?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV9jMjU3NzlmNC01ZjdjLTRjZWEtYmM2MS1mYjMwZjllNzkxM2EiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJmaWxlcy9HRUNPTi9Ccm9rZXJzL0ZpbGxlciBJbWFnZS9GaWxsZXIuanBnIiwiaWF0IjoxNzUwMzUxMTQ4LCJleHAiOjIzODEwNzExNDh9.mNmjblQw3Kd5ewDrJnBdHzbbc2BvOFhJjYPgCyJo3PA"
                     alt="Studio workspace"
                     className="w-full h-full object-cover opacity-80"
                   />
                 </div>
                 <div className="aspect-square bg-burgundy-700 overflow-hidden">
                   <img 
-                    src="https://images.unsplash.com/photo-1470813740244-df37b8c1edcb?auto=format&fit=crop&w=300&q=80"
+                    src="https://wbuiebxqdjuxhvdtiata.supabase.co/storage/v1/object/sign/files/GECON/Brokers/Filler%20Image/Filler.jpg?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV9jMjU3NzlmNC01ZjdjLTRjZWEtYmM2MS1mYjMwZjllNzkxM2EiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJmaWxlcy9HRUNPTi9Ccm9rZXJzL0ZpbGxlciBJbWFnZS9GaWxsZXIuanBnIiwiaWF0IjoxNzUwMzUxMTQ4LCJleHAiOjIzODEwNzExNDh9.mNmjblQw3Kd5ewDrJnBdHzbbc2BvOFhJjYPgCyJo3PA"
                     alt="Creative process"
                     className="w-full h-full object-cover opacity-80"
                   />
