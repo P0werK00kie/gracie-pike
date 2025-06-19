@@ -30,39 +30,7 @@ const Portfolio = () => {
       images: [
         "photo-1487887235947-a955ef187fcc",
         "photo-1526374965328-7f61d4dc18c5"
-      ],
-      description: "Lorem ipsum dolor sit amet"
-    },
-    {
-      id: 4,
-      title: "Lorem ipsum dolor sit amet",
-      category: "Web Design",
-      images: [
-        "photo-1493397212122-2b85dda8106b",
-        "photo-1487058792275-0ad4aaf24ca7"
-      ],
-      description: "Vestibulum faucibus blandit dui. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. "
-    },
-    {
-      id: 5,
-      title: "Fine Art Collection",
-      category: "Digital Art",
-      images: [
-        "photo-1470813740244-df37b8c1edcb",
-        "photo-1433086966358-54859d0ed716"
-      ],
-      description: "Vestibulum faucibus blandit dui. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. "
-    },
-    {
-      id: 6,
-      title: "Lorem ipsum dolor sit amet",
-      category: "Branding",
-      images: [
-        "photo-1526374965328-7f61d4dc18c5",
-        "photo-1487887235947-a955ef187fcc"
-      ],
-      description: "Comprehensive visual identity system for a prestigious consulting firm."
-    }
+      ]
   ];
 
   return (
