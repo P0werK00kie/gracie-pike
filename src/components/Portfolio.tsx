@@ -51,7 +51,7 @@ const Portfolio = () => {
       id: 3,
       name: "Instagram",
       url: "https://www.instagram.com/graciepikemusic?igsh=MTcxZzh6aWd4Y2ZzZQ%3D%3D&utm_source=qr",
-      imageUrl: "https://images.pexels.com/photos/267350/pexels-photo-267350.jpeg?auto=compress&cs=tinysrgb&w=600"
+      imageUrl: "https://scontent-atl3-2.cdninstagram.com/v/t51.75761-19/509835994_18503670202045434_7804250483685154797_n.jpg?stp=dst-jpg_s100x100_tt6&_nc_cat=100&ccb=1-7&_nc_sid=bf7eb4&_nc_ohc=BCo_hjCoxGEQ7kNvwGkePrT&_nc_oc=AdkfHPKjOL6vhS0NXESrqqKocQZr0u0eFGle6MgrTERACVQgzAXcvW3e-pLYisiihVg&_nc_zt=24&_nc_ht=scontent-atl3-2.cdninstagram.com&_nc_gid=MIi20YcB4pMK1tzFVa3doQ&oh=00_AfPcck5G_nnCtWl3iagrHqql5eeMQCFpY1ndkvksor1z0g&oe=685D5260"
     },
     {
       id: 4,
