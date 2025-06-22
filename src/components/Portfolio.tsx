@@ -39,7 +39,7 @@ const Portfolio = () => {
       id: 1,
       name: "Spotify",
       url: "https://open.spotify.com/artist/23eu2aznCpnIJVgB8G5g7S?si=JuZLltgBRuKa5ssQ7dR6Qg",
-      imageUrl: "https://images.pexels.com/photos/6686445/pexels-photo-6686445.jpeg?auto=compress&cs=tinysrgb&w=600"
+      imageUrl: "https://i.scdn.co/image/ab67616d0000b2730dd37e96b98133fb1f6bed3c"
     },
     {
       id: 2,
