@@ -26,7 +26,7 @@ const Footer = () => {
               onClick={scrollToTop}
               className="text-3xl font-display font-bold text-background mb-6 hover:text-amber-300 transition-colors duration-300"
             >
-              Gracie Albury
+              Gracie Pike
             </button>
             <div className="w-16 h-0.5 bg-amber-400 mb-6 mx-auto"></div>
             <p className="text-burgundy-100 leading-relaxed mb-8 font-serif text-lg max-w-md">
