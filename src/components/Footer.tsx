@@ -66,7 +66,7 @@ const Footer = () => {
         {/* Copyright */}
         <div className="border-t border-burgundy-700 pt-8 text-center">
           <p className="text-burgundy-200 flex items-center justify-center space-x-2 font-serif">
-            <span>© 2025 Gracie Pike. Crafted with</span>
+            <span>© 2025 Gracie Pike.</span>
           </p>
         </div>
       </div>
