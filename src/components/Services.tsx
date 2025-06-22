@@ -1,4 +1,3 @@
-
 import { Palette, Camera, Monitor, Brush, Award, Users } from 'lucide-react';
 
 const Services = () => {
@@ -48,14 +47,14 @@ const Services = () => {
   ];
 
   return (
-    <section id="services" className="py-24 bg-gradient-to-br from-amber-50/20 to-background relative overflow-hidden">
+    <section id="services" className="py-20 bg-gradient-to-br from-amber-50/20 to-background relative overflow-hidden">
       {/* Background decorations */}
       <div className="absolute top-0 left-0 w-72 h-72 border border-burgundy-100 opacity-20 rotate-12"></div>
       <div className="absolute bottom-0 right-0 w-48 h-48 bg-amber-400 opacity-5 -rotate-12"></div>
       
       <div className="container mx-auto px-6 relative z-10">
         {/* Section Header */}
-        <div className="text-center mb-20 ornamental-border pb-8">
+        <div className="text-center mb-16 ornamental-border pb-8">
           <h2 className="text-5xl md:text-6xl font-display font-bold mb-6">
             <span className="text-burgundy-900">Creative</span>
             <span className="block text-amber-600 text-4xl md:text-5xl mt-2">Services</span>

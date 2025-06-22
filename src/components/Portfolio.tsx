@@ -1,4 +1,3 @@
-
 import { ExternalLink, Eye, ChevronRight } from 'lucide-react';
 
 const Portfolio = () => {
@@ -36,14 +35,14 @@ const Portfolio = () => {
   ];
 
   return (
-    <section id="portfolio" className="py-24 bg-gradient-to-br from-background to-amber-50/30 relative overflow-hidden">
+    <section id="portfolio" className="py-20 bg-gradient-to-br from-background to-amber-50/30 relative overflow-hidden">
       {/* Background decorations */}
       <div className="absolute top-20 right-10 w-48 h-48 border border-burgundy-200 opacity-10 rotate-12"></div>
       <div className="absolute bottom-20 left-10 w-32 h-32 bg-amber-400 opacity-5 rotate-45"></div>
       
       <div className="container mx-auto px-6 relative z-10">
         {/* Section Header */}
-        <div className="text-center mb-16 ornamental-border pb-8">
+        <div className="text-center mb-12 ornamental-border pb-8">
           <h2 className="text-5xl md:text-6xl font-display font-bold mb-6">
             <span className="text-burgundy-900">Portfolio</span>
             <span className="block text-amber-600 text-4xl md:text-5xl mt-2">Collection</span>
