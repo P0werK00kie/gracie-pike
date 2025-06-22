@@ -27,7 +27,7 @@ const Header = () => {
           <div className="text-left">
             <h1 className="text-3xl md:text-4xl font-display font-bold text-burgundy-900 tracking-wide">
               <span className="relative">
-                Gracie Albury
+                Gracie Pike
                 <div className="absolute -bottom-2 left-0 w-16 h-0.5 bg-amber-400"></div>
               </span>
             </h1>
