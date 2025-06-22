@@ -45,7 +45,7 @@ const Portfolio = () => {
       id: 2,
       name: "Apple Music",
       url: "https://music.apple.com/us/artist/gracie-pike/210652860",
-      imageUrl: "https://is1-ssl.mzstatic.com/image/thumb/Music/12/f1/47/mzi.xplcqlao.tif/1200x630bf-60.jpg"
+      imageUrl: "https://i.scdn.co/image/ab67616d0000b2730dd37e96b98133fb1f6bed3c"
     },
     {
       id: 3,
