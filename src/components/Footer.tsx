@@ -1,4 +1,3 @@
-
 import { Heart, Instagram, Twitter, Dribbble, Globe, ArrowUp } from 'lucide-react';
 
 const Footer = () => {
@@ -20,23 +19,23 @@ const Footer = () => {
       <div className="absolute bottom-0 right-0 w-48 h-48 bg-amber-400 opacity-10 -rotate-45"></div>
       
       <div className="container mx-auto px-6 relative z-10">
-        <div className="grid md:grid-cols-4 gap-12 mb-12">
+        <div className="flex flex-col items-center gap-12 mb-12">
           {/* Brand */}
-          <div className="md:col-span-2">
+          <div className="text-center">
             <button 
               onClick={scrollToTop}
               className="text-3xl font-display font-bold text-background mb-6 hover:text-amber-300 transition-colors duration-300"
             >
               Gracie Albury
             </button>
-            <div className="w-16 h-0.5 bg-amber-400 mb-6"></div>
+            <div className="w-16 h-0.5 bg-amber-400 mb-6 mx-auto"></div>
             <p className="text-burgundy-100 leading-relaxed mb-8 font-serif text-lg max-w-md">
               Where timeless elegance meets contemporary creativity. Crafting distinctive 
               visual narratives that resonate across generations.
             </p>
             
             {/* Social Links */}
-            <div className="flex space-x-4">
+            <div className="flex justify-center space-x-4">
               {socialLinks.map((social, index) => (
                 <a
                   key={index}
@@ -50,38 +49,6 @@ const Footer = () => {
                 </a>
               ))}
             </div>
-          </div>
-          
-          {/* Quick Links */}
-          <div>
-            <h4 className="text-xl font-display font-semibold mb-6 text-amber-300">Navigation</h4>
-            <nav className="space-y-3">
-              {['About', 'Portfolio', 'Services', 'Contact'].map((link) => (
-                <button
-                  key={link}
-                  onClick={() => document.querySelector(`#${link.toLowerCase()}`)?.scrollIntoView({ behavior: 'smooth' })}
-                  className="block text-burgundy-100 hover:text-amber-300 transition-colors duration-300 font-serif text-left"
-                >
-                  {link}
-                </button>
-              ))}
-            </nav>
-          </div>
-          
-          {/* Services */}
-          <div>
-            <h4 className="text-xl font-display font-semibold mb-6 text-amber-300">Expertise</h4>
-            <nav className="space-y-3">
-              {['Brand Identity', 'Fine Art Photography', 'Digital Experiences', 'Visual Arts', 'Creative Consulting'].map((service) => (
-                <a
-                  key={service}
-                  href="#services"
-                  className="block text-burgundy-100 hover:text-amber-300 transition-colors duration-300 font-serif"
-                >
-                  {service}
-                </a>
-              ))}
-            </nav>
           </div>
         </div>
         
