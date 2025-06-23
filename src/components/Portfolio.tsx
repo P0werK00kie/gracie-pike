@@ -21,6 +21,16 @@ const Portfolio = () => {
         "photo-1470813740244-df37b8c1edcb"
       ],
       description: "Vestibulum faucibus blandit dui. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. "
+    },
+    {
+      id: 3,
+      title: "Lorem ipsum dolor sit amet",
+      category: "Photography",
+      images: [
+        "photo-1433086966358-54859d0ed716",
+        "photo-1470813740244-df37b8c1edcb"
+      ],
+      description: "Vestibulum faucibus blandit dui. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. "
     }
   ];
 
