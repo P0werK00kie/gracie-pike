@@ -10,7 +10,7 @@ const Portfolio = () => {
         "photo-1487058792275-0ad4aaf24ca7",
         "photo-1493397212122-2b85dda8106b"
       ],
-      description: "Vestibulum faucibus blandit dui. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum faucibus blandit dui. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. "
+      description: "Listen to my latest songs and take a piece of the music home with you with my exclusive collection of apparel and more."
     },
     {
       id: 2,
