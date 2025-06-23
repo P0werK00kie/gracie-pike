@@ -18,19 +18,19 @@ const Portfolio = () => {
       category: "Production",
       images: [
         "https://wbuiebxqdjuxhvdtiata.supabase.co/storage/v1/object/sign/gracie-pike/Portfolio/music%20production.webp?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV9jMjU3NzlmNC01ZjdjLTRjZWEtYmM2MS1mYjMwZjllNzkxM2EiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJncmFjaWUtcGlrZS9Qb3J0Zm9saW8vbXVzaWMgcHJvZHVjdGlvbi53ZWJwIiwiaWF0IjoxNzUwNjg5OTY5LCJleHAiOjIzODE0MDk5Njl9.sWot3jk8p6J5Aq5OozPuTH9-4QZztoZDteZZnj5gZzM",
-        "photo-1470813740244-df37b8c1edcb"
+        "https://wbuiebxqdjuxhvdtiata.supabase.co/storage/v1/object/sign/gracie-pike/Portfolio/music%20production.webp?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV9jMjU3NzlmNC01ZjdjLTRjZWEtYmM2MS1mYjMwZjllNzkxM2EiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJncmFjaWUtcGlrZS9Qb3J0Zm9saW8vbXVzaWMgcHJvZHVjdGlvbi53ZWJwIiwiaWF0IjoxNzUwNjg5OTY5LCJleHAiOjIzODE0MDk5Njl9.sWot3jk8p6J5Aq5OozPuTH9-4QZztoZDteZZnj5gZzM"
       ],
       description: "From songwriting to the final track, I pour my heart into every aspect of my music at my own production company."
     },
     {
       id: 3,
-      title: "Lorem ipsum dolor sit amet",
+      title: "Creative Photography",
       category: "Photography",
       images: [
-        "photo-1433086966358-54859d0ed716",
-        "photo-1470813740244-df37b8c1edcb"
+        "https://images.unsplash.com/photo-1433086966358-54859d0ed716?auto=format&fit=crop&w=600&q=80",
+        "https://images.unsplash.com/photo-1470813740244-df37b8c1edcb?auto=format&fit=crop&w=100&q=80"
       ],
-      description: "Vestibulum faucibus blandit dui. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. "
+      description: "Capturing moments and creating visual stories that resonate with the heart and soul."
     }
   ];
 
@@ -73,6 +73,27 @@ const Portfolio = () => {
     }
   ];
 
+  // Helper function to determine if an image URL is from Supabase or Unsplash
+  const getImageSrc = (imageUrl) => {
+    if (imageUrl.startsWith('https://')) {
+      // It's already a complete URL (Supabase or other)
+      return imageUrl;
+    } else {
+      // It's an Unsplash image ID, construct the full URL
+      return `https://images.unsplash.com/${imageUrl}?auto=format&fit=crop&w=600&q=80`;
+    }
+  };
+
+  const getSecondaryImageSrc = (imageUrl) => {
+    if (imageUrl.startsWith('https://')) {
+      // It's already a complete URL (Supabase or other)
+      return imageUrl;
+    } else {
+      // It's an Unsplash image ID, construct the full URL
+      return `https://images.unsplash.com/${imageUrl}?auto=format&fit=crop&w=100&q=80`;
+    }
+  };
+
   return (
     <section id="portfolio" className="py-20 bg-gradient-to-br from-background to-amber-50/30 relative overflow-hidden">
       {/* Background decorations */}
@@ -105,7 +126,7 @@ const Portfolio = () => {
                 {/* Image Gallery */}
                 <div className="relative overflow-hidden aspect-[4/3]">
                   <img 
-                    src={`https://images.unsplash.com/${project.images[0]}?auto=format&fit=crop&w=600&q=80`}
+                    src={getImageSrc(project.images[0])}
                     alt={project.title}
                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
                   />
@@ -125,7 +146,7 @@ const Portfolio = () => {
                   {/* Secondary image indicator */}
                   <div className="absolute top-4 right-4 w-12 h-12 border-2 border-background/80 overflow-hidden">
                     <img 
-                      src={`https://images.unsplash.com/${project.images[1]}?auto=format&fit=crop&w=100&q=80`}
+                      src={getSecondaryImageSrc(project.images[1])}
                       alt=""
                       className="w-full h-full object-cover"
                     />
