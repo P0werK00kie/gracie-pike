@@ -4,23 +4,33 @@ const Portfolio = () => {
   const projects = [
     {
       id: 1,
-      title: "Gracie Pike Music",
+      title: "Music & Merch",
       category: "Music",
       images: [
-        "photo-1487058792275-0ad4aaf24ca7",
-        "photo-1493397212122-2b85dda8106b"
+        "https://wbuiebxqdjuxhvdtiata.supabase.co/storage/v1/object/sign/gracie-pike/Portfolio/music.webp?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV9jMjU3NzlmNC01ZjdjLTRjZWEtYmM2MS1mYjMwZjllNzkxM2EiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJncmFjaWUtcGlrZS9Qb3J0Zm9saW8vbXVzaWMud2VicCIsImlhdCI6MTc1MDY4OTgxOCwiZXhwIjoyMzgxNDA5ODE4fQ.2e3NKDMayqJTRUJ1n_fwYlW7YwAVUBNDvbRymNJDytk",
+        "https://wbuiebxqdjuxhvdtiata.supabase.co/storage/v1/object/sign/gracie-pike/Portfolio/music.webp?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV9jMjU3NzlmNC01ZjdjLTRjZWEtYmM2MS1mYjMwZjllNzkxM2EiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJncmFjaWUtcGlrZS9Qb3J0Zm9saW8vbXVzaWMud2VicCIsImlhdCI6MTc1MDY4OTgxOCwiZXhwIjoyMzgxNDA5ODE4fQ.2e3NKDMayqJTRUJ1n_fwYlW7YwAVUBNDvbRymNJDytk"
       ],
-      description: "Vestibulum faucibus blandit dui. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum faucibus blandit dui. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. "
+      description: "Listen to my latest songs and take a piece of the music home with you with my exclusive collection of apparel and more."
     },
     {
       id: 2,
-      title: "Lorem ipsum dolor sit amet",
+      title: "Gracie Music Production",
+      category: "Production",
+      images: [
+        "https://wbuiebxqdjuxhvdtiata.supabase.co/storage/v1/object/sign/gracie-pike/Portfolio/music%20production.webp?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV9jMjU3NzlmNC01ZjdjLTRjZWEtYmM2MS1mYjMwZjllNzkxM2EiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJncmFjaWUtcGlrZS9Qb3J0Zm9saW8vbXVzaWMgcHJvZHVjdGlvbi53ZWJwIiwiaWF0IjoxNzUwNjg5OTY5LCJleHAiOjIzODE0MDk5Njl9.sWot3jk8p6J5Aq5OozPuTH9-4QZztoZDteZZnj5gZzM",
+        "https://wbuiebxqdjuxhvdtiata.supabase.co/storage/v1/object/sign/gracie-pike/Portfolio/music%20production.webp?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV9jMjU3NzlmNC01ZjdjLTRjZWEtYmM2MS1mYjMwZjllNzkxM2EiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJncmFjaWUtcGlrZS9Qb3J0Zm9saW8vbXVzaWMgcHJvZHVjdGlvbi53ZWJwIiwiaWF0IjoxNzUwNjg5OTY5LCJleHAiOjIzODE0MDk5Njl9.sWot3jk8p6J5Aq5OozPuTH9-4QZztoZDteZZnj5gZzM"
+      ],
+      description: "From songwriting to the final track, I pour my heart into every aspect of my music at my own production company."
+    },
+    {
+      id: 3,
+      title: "Creative Photography",
       category: "Photography",
       images: [
-        "photo-1433086966358-54859d0ed716",
-        "photo-1470813740244-df37b8c1edcb"
+        "https://images.unsplash.com/photo-1433086966358-54859d0ed716?auto=format&fit=crop&w=600&q=80",
+        "https://images.unsplash.com/photo-1470813740244-df37b8c1edcb?auto=format&fit=crop&w=100&q=80"
       ],
-      description: "Vestibulum faucibus blandit dui. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. "
+      description: "Capturing moments and creating visual stories that resonate with the heart and soul."
     }
   ];
 
@@ -63,6 +73,27 @@ const Portfolio = () => {
     }
   ];
 
+  // Helper function to determine if an image URL is from Supabase or Unsplash
+  const getImageSrc = (imageUrl) => {
+    if (imageUrl.startsWith('https://')) {
+      // It's already a complete URL (Supabase or other)
+      return imageUrl;
+    } else {
+      // It's an Unsplash image ID, construct the full URL
+      return `https://images.unsplash.com/${imageUrl}?auto=format&fit=crop&w=600&q=80`;
+    }
+  };
+
+  const getSecondaryImageSrc = (imageUrl) => {
+    if (imageUrl.startsWith('https://')) {
+      // It's already a complete URL (Supabase or other)
+      return imageUrl;
+    } else {
+      // It's an Unsplash image ID, construct the full URL
+      return `https://images.unsplash.com/${imageUrl}?auto=format&fit=crop&w=100&q=80`;
+    }
+  };
+
   return (
     <section id="portfolio" className="py-20 bg-gradient-to-br from-background to-amber-50/30 relative overflow-hidden">
       {/* Background decorations */}
@@ -95,7 +126,7 @@ const Portfolio = () => {
                 {/* Image Gallery */}
                 <div className="relative overflow-hidden aspect-[4/3]">
                   <img 
-                    src={`https://images.unsplash.com/${project.images[0]}?auto=format&fit=crop&w=600&q=80`}
+                    src={getImageSrc(project.images[0])}
                     alt={project.title}
                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
                   />
@@ -104,10 +135,6 @@ const Portfolio = () => {
                   <div className="absolute inset-0 bg-gradient-to-t from-burgundy-900/80 via-burgundy-900/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                     <div className="absolute bottom-4 left-4 right-4">
                       <div className="flex space-x-3">
-                        <button className="flex items-center space-x-2 bg-background/90 text-burgundy-900 px-4 py-2 hover:bg-background transition-colors">
-                          <Eye size={16} />
-                          <span className="text-sm font-medium">View</span>
-                        </button>
                         <button className="flex items-center space-x-2 bg-burgundy-900 text-background px-4 py-2 hover:bg-burgundy-800 transition-colors">
                           <ExternalLink size={16} />
                           <span className="text-sm font-medium">Details</span>
@@ -119,7 +146,7 @@ const Portfolio = () => {
                   {/* Secondary image indicator */}
                   <div className="absolute top-4 right-4 w-12 h-12 border-2 border-background/80 overflow-hidden">
                     <img 
-                      src={`https://images.unsplash.com/${project.images[1]}?auto=format&fit=crop&w=100&q=80`}
+                      src={getSecondaryImageSrc(project.images[1])}
                       alt=""
                       className="w-full h-full object-cover"
                     />

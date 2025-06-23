@@ -21,7 +21,7 @@ const About = () => {
             
             <div className="space-y-6 font-serif text-lg leading-relaxed text-muted-foreground">
               <p>
-                I'm a singer-songwriter right here in Monroe, Georgia, and I believe in the power of a good story and an honest song.
+                I'm a singer-songwriter right here in Georgia, and I believe in the power of a good story and an honest song.
               </p>
               
               <p>
