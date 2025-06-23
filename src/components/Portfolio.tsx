@@ -114,10 +114,6 @@ const Portfolio = () => {
                   <div className="absolute inset-0 bg-gradient-to-t from-burgundy-900/80 via-burgundy-900/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                     <div className="absolute bottom-4 left-4 right-4">
                       <div className="flex space-x-3">
-                        <button className="flex items-center space-x-2 bg-background/90 text-burgundy-900 px-4 py-2 hover:bg-background transition-colors">
-                          <Eye size={16} />
-                          <span className="text-sm font-medium">View</span>
-                        </button>
                         <button className="flex items-center space-x-2 bg-burgundy-900 text-background px-4 py-2 hover:bg-burgundy-800 transition-colors">
                           <ExternalLink size={16} />
                           <span className="text-sm font-medium">Details</span>
