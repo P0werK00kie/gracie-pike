@@ -59,7 +59,7 @@ const Hero = () => {
             <div className="relative group">
               <div className="aspect-[4/5] bg-gradient-to-br from-burgundy-100 to-amber-50 luxury-shadow border border-amber-200 relative overflow-hidden">
                 <img 
-                  src="https://wbuiebxqdjuxhvdtiata.supabase.co/storage/v1/object/sign/files/GECON/Brokers/Filler%20Image/Filler.jpg?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV9jMjU3NzlmNC01ZjdjLTRjZWEtYmM2MS1mYjMwZjllNzkxM2EiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJmaWxlcy9HRUNPTi9Ccm9rZXJzL0ZpbGxlciBJbWFnZS9GaWxsZXIuanBnIiwiaWF0IjoxNzUwMzUxMTQ4LCJleHAiOjIzODEwNzExNDh9.mNmjblQw3Kd5ewDrJnBdHzbbc2BvOFhJjYPgCyJo3PA"
+                  src="https://wbuiebxqdjuxhvdtiata.supabase.co/storage/v1/object/sign/gracie-pike/Hero/83b44830-1882-41a6-bf3b-739b46cc4def.JPG?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV9jMjU3NzlmNC01ZjdjLTRjZWEtYmM2MS1mYjMwZjllNzkxM2EiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJncmFjaWUtcGlrZS9IZXJvLzgzYjQ0ODMwLTE4ODItNDFhNi1iZjNiLTczOWI0NmNjNGRlZi5KUEciLCJpYXQiOjE3NTA2NTIxNTUsImV4cCI6MjM4MTM3MjE1NX0.5a3rV1zf2kwXD9L95O4BJm4UONIjyG3WQgi8QTIj_N0"
                   alt="Featured creative work"
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
                 />
