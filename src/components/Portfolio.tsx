@@ -14,7 +14,7 @@ const Portfolio = () => {
     },
     {
       id: 2,
-      title: "Lorem ipsum dolor sit amet",
+      title: "Gracie Music Production",
       category: "Photography",
       images: [
         "photo-1433086966358-54859d0ed716",
