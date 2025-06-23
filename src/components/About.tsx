@@ -2,7 +2,7 @@ import { Award, Users, Clock } from 'lucide-react';
 
 const About = () => {
   return (
-    <section id="about" className="py-20 bg-background relative overflow-hidden">
+    <section id="about" className="py-16 bg-background relative overflow-hidden">
       {/* Background decorative elements */}
       <div className="absolute top-0 right-0 w-64 h-64 border border-amber-200 opacity-10 rotate-12"></div>
       <div className="absolute bottom-0 left-0 w-48 h-48 bg-burgundy-900 opacity-5 rotate-45"></div>
@@ -15,26 +15,29 @@ const About = () => {
             <div className="w-24 h-0.5 bg-amber-400"></div>
             
             <h2 className="text-5xl md:text-6xl font-display font-bold text-burgundy-900 leading-tight">
-              Artisan of
-              <span className="block text-amber-600">Visual Stories</span>
+              Hey, I'm
+              <span className="block text-amber-600">Gracie Pike</span>
             </h2>
             
             <div className="space-y-6 font-serif text-lg leading-relaxed text-muted-foreground">
               <p>
-                With a profound appreciation for classical aesthetics and contemporary innovation, 
-                I specialize in creating visual narratives that transcend fleeting trends to 
-                achieve timeless elegance.
+                I'm a singer-songwriter right here in Monroe, Georgia, and I believe in the power of a good story and an honest song.
               </p>
               
               <p>
-                My approach marries the sophisticated principles of traditional artistry with 
-                modern techniques, ensuring each project resonates with both heritage and 
-                contemporary relevance.
+                Music and faith have been the two constants in my life for as long as I can remember. Growing up as one of eight kids, our home was always full of noise, love, and music. My father is a preacher, and from a young age, I saw how a song could lift a spirit and bring people together in a way that nothing else could. It was in that little country church that I first found my voice and felt the calling to share my own songs.
               </p>
               
               <p>
-                Every collaboration begins with understanding your unique story, values, and 
-                aspirations, translating them into visual expressions that captivate and endure.
+                My music is a reflection of my life—my faith in God, my Southern roots, and the everyday stories of hope and struggle that we all share. It's got a country soul and a gospel heart, and every lyric I write is a piece of my story that I hope resonates with yours. For me, songwriting is like a conversation with God, and performing is my way of sharing that conversation with you.
+              </p>
+              
+              <p>
+                Beyond music, I'm a business owner and, most importantly, a woman striving to live a life of faith. Whether I'm writing a new melody, running my business, or spending time with my family, my goal is the same: to shine a little light and share the grace that I've been so freely given.
+              </p>
+              
+              <p>
+                I hope my music meets you wherever you are and reminds you that you're not alone on this journey.
               </p>
             </div>
             
@@ -53,7 +56,7 @@ const About = () => {
               <div className="aspect-[3/4] bg-gradient-to-br from-burgundy-50 to-amber-50 luxury-shadow border border-amber-200 overflow-hidden relative">
                 <img 
                   src="https://wbuiebxqdjuxhvdtiata.supabase.co/storage/v1/object/sign/gracie-pike/About/787b5600-e206-4cc3-903d-bfed3888788b.JPG?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV9jMjU3NzlmNC01ZjdjLTRjZWEtYmM2MS1mYjMwZjllNzkxM2EiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJncmFjaWUtcGlrZS9BYm91dC83ODdiNTYwMC1lMjA2LTRjYzMtOTAzZC1iZmVkMzg4ODc4OGIuSlBHIiwiaWF0IjoxNzUwNjUzMjk0LCJleHAiOjIzODEzNzMyOTR9.jASx69X0wZHtsicoe8awsAJqdUJ7t0s6LS8tlg3gUZc"
-                  alt="Creative professional portrait"
+                  alt="Gracie Pike portrait"
                   className="w-full h-full object-cover"
                 />
                 <div className="absolute inset-0 bg-burgundy-900/10"></div>
