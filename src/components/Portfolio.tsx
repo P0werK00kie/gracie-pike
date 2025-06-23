@@ -114,9 +114,9 @@ const Portfolio = () => {
           </p>
         </div>
         
-        {/* Portfolio Grid - Centered Responsive Layout */}
+        {/* Portfolio Grid - Changed to 2 columns */}
         <div className="flex justify-center mb-20">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl w-full justify-items-center">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl w-full justify-items-center">
             {projects.map((project, index) => (
               <div 
                 key={project.id}
@@ -189,7 +189,7 @@ const Portfolio = () => {
           </p>
         </div>
 
-        {/* Social Links Grid - Centered Responsive Layout */}
+        {/* Social Links Grid - Keeping 3 columns for social links */}
         <div className="flex justify-center">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl w-full justify-items-center">
             {socialLinks.map((social, index) => (
