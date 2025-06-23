@@ -4,7 +4,7 @@ const Portfolio = () => {
   const projects = [
     {
       id: 1,
-      title: "Lorem ipsum dolor sit amet",
+      title: "Gracie Pike Music",
       category: "Branding",
       images: [
         "photo-1487058792275-0ad4aaf24ca7",
