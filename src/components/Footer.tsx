@@ -1,4 +1,4 @@
-import { Heart, Instagram, Twitter, Dribbble, Globe, ArrowUp } from 'lucide-react';
+import { Heart, Instagram, Twitter, Dribbble, Globe, ArrowUp, Facebook } from 'lucide-react';
 
 const Footer = () => {
   const socialLinks = [
