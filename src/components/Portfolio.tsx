@@ -83,69 +83,71 @@ const Portfolio = () => {
           </p>
         </div>
         
-        {/* Portfolio Grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-20">
-          {projects.map((project, index) => (
-            <div 
-              key={project.id}
-              className="group bg-card luxury-shadow hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 border border-amber-200 animate-elegant-entrance"
-              style={{ animationDelay: `${index * 100}ms` }}
-            >
-              {/* Image Gallery */}
-              <div className="relative overflow-hidden aspect-[4/3]">
-                <img 
-                  src={`https://images.unsplash.com/${project.images[0]}?auto=format&fit=crop&w=600&q=80`}
-                  alt={project.title}
-                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
-                />
-                
-                {/* Hover Overlay */}
-                <div className="absolute inset-0 bg-gradient-to-t from-burgundy-900/80 via-burgundy-900/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                  <div className="absolute bottom-4 left-4 right-4">
-                    <div className="flex space-x-3">
-                      <button className="flex items-center space-x-2 bg-background/90 text-burgundy-900 px-4 py-2 hover:bg-background transition-colors">
-                        <Eye size={16} />
-                        <span className="text-sm font-medium">View</span>
-                      </button>
-                      <button className="flex items-center space-x-2 bg-burgundy-900 text-background px-4 py-2 hover:bg-burgundy-800 transition-colors">
-                        <ExternalLink size={16} />
-                        <span className="text-sm font-medium">Details</span>
-                      </button>
+        {/* Portfolio Grid - Centered Responsive Layout */}
+        <div className="flex justify-center mb-20">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl w-full justify-items-center">
+            {projects.map((project, index) => (
+              <div 
+                key={project.id}
+                className="group bg-card luxury-shadow hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 border border-amber-200 animate-elegant-entrance w-full max-w-sm"
+                style={{ animationDelay: `${index * 100}ms` }}
+              >
+                {/* Image Gallery */}
+                <div className="relative overflow-hidden aspect-[4/3]">
+                  <img 
+                    src={`https://images.unsplash.com/${project.images[0]}?auto=format&fit=crop&w=600&q=80`}
+                    alt={project.title}
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+                  />
+                  
+                  {/* Hover Overlay */}
+                  <div className="absolute inset-0 bg-gradient-to-t from-burgundy-900/80 via-burgundy-900/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                    <div className="absolute bottom-4 left-4 right-4">
+                      <div className="flex space-x-3">
+                        <button className="flex items-center space-x-2 bg-background/90 text-burgundy-900 px-4 py-2 hover:bg-background transition-colors">
+                          <Eye size={16} />
+                          <span className="text-sm font-medium">View</span>
+                        </button>
+                        <button className="flex items-center space-x-2 bg-burgundy-900 text-background px-4 py-2 hover:bg-burgundy-800 transition-colors">
+                          <ExternalLink size={16} />
+                          <span className="text-sm font-medium">Details</span>
+                        </button>
+                      </div>
                     </div>
                   </div>
-                </div>
 
-                {/* Secondary image indicator */}
-                <div className="absolute top-4 right-4 w-12 h-12 border-2 border-background/80 overflow-hidden">
-                  <img 
-                    src={`https://images.unsplash.com/${project.images[1]}?auto=format&fit=crop&w=100&q=80`}
-                    alt=""
-                    className="w-full h-full object-cover"
-                  />
+                  {/* Secondary image indicator */}
+                  <div className="absolute top-4 right-4 w-12 h-12 border-2 border-background/80 overflow-hidden">
+                    <img 
+                      src={`https://images.unsplash.com/${project.images[1]}?auto=format&fit=crop&w=100&q=80`}
+                      alt=""
+                      className="w-full h-full object-cover"
+                    />
+                  </div>
                 </div>
-              </div>
-              
-              {/* Project Info */}
-              <div className="p-8">
-                <div className="mb-4">
-                  <span className="inline-block bg-amber-100 text-burgundy-800 px-3 py-1 text-sm font-medium border border-amber-200">
-                    {project.category}
-                  </span>
-                </div>
-                <h3 className="text-2xl font-display font-bold text-burgundy-900 mb-4 group-hover:text-amber-600 transition-colors">
-                  {project.title}
-                </h3>
-                <p className="text-muted-foreground leading-relaxed mb-6 font-serif">
-                  {project.description}
-                </p>
                 
-                <button className="flex items-center text-burgundy-700 font-medium hover:text-amber-600 transition-colors group/btn">
-                  <span>Explore Project</span>
-                  <ChevronRight size={16} className="ml-2 group-hover/btn:translate-x-1 transition-transform" />
-                </button>
+                {/* Project Info */}
+                <div className="p-8">
+                  <div className="mb-4">
+                    <span className="inline-block bg-amber-100 text-burgundy-800 px-3 py-1 text-sm font-medium border border-amber-200">
+                      {project.category}
+                    </span>
+                  </div>
+                  <h3 className="text-2xl font-display font-bold text-burgundy-900 mb-4 group-hover:text-amber-600 transition-colors">
+                    {project.title}
+                  </h3>
+                  <p className="text-muted-foreground leading-relaxed mb-6 font-serif">
+                    {project.description}
+                  </p>
+                  
+                  <button className="flex items-center text-burgundy-700 font-medium hover:text-amber-600 transition-colors group/btn">
+                    <span>Explore Project</span>
+                    <ChevronRight size={16} className="ml-2 group-hover/btn:translate-x-1 transition-transform" />
+                  </button>
+                </div>
               </div>
-            </div>
-          ))}
+            ))}
+          </div>
         </div>
 
         {/* Connect With Gracie Section */}
@@ -160,42 +162,44 @@ const Portfolio = () => {
           </p>
         </div>
 
-        {/* Social Links Grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {socialLinks.map((social, index) => (
-            <div 
-              key={social.id}
-              className="group bg-card luxury-shadow hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 border border-amber-200 animate-elegant-entrance"
-              style={{ animationDelay: `${index * 100}ms` }}
-            >
-              {/* Social Platform Image */}
-              <div className="relative overflow-hidden aspect-[4/3]">
-                <img 
-                  src={social.imageUrl}
-                  alt={social.name}
-                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-burgundy-900/60 to-transparent"></div>
-              </div>
-              
-              {/* Social Platform Info */}
-              <div className="p-8">
-                <h3 className="text-2xl font-display font-bold text-burgundy-900 mb-6 group-hover:text-amber-600 transition-colors">
-                  {social.name}
-                </h3>
+        {/* Social Links Grid - Centered Responsive Layout */}
+        <div className="flex justify-center">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl w-full justify-items-center">
+            {socialLinks.map((social, index) => (
+              <div 
+                key={social.id}
+                className="group bg-card luxury-shadow hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 border border-amber-200 animate-elegant-entrance w-full max-w-sm"
+                style={{ animationDelay: `${index * 100}ms` }}
+              >
+                {/* Social Platform Image */}
+                <div className="relative overflow-hidden aspect-[4/3]">
+                  <img 
+                    src={social.imageUrl}
+                    alt={social.name}
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-burgundy-900/60 to-transparent"></div>
+                </div>
                 
-                <a 
-                  href={social.url}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center space-x-2 bg-burgundy-900 text-background px-6 py-3 hover:bg-burgundy-800 transition-colors duration-300 font-medium tracking-wide"
-                >
-                  <ExternalLink size={16} />
-                  <span>Visit Profile</span>
-                </a>
+                {/* Social Platform Info */}
+                <div className="p-8">
+                  <h3 className="text-2xl font-display font-bold text-burgundy-900 mb-6 group-hover:text-amber-600 transition-colors">
+                    {social.name}
+                  </h3>
+                  
+                  <a 
+                    href={social.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center space-x-2 bg-burgundy-900 text-background px-6 py-3 hover:bg-burgundy-800 transition-colors duration-300 font-medium tracking-wide"
+                  >
+                    <ExternalLink size={16} />
+                    <span>Visit Profile</span>
+                  </a>
+                </div>
               </div>
-            </div>
-          ))}
+            ))}
+          </div>
         </div>
       </div>
     </section>
