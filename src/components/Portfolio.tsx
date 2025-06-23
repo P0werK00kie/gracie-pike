@@ -221,7 +221,7 @@ const Portfolio = () => {
                     className="inline-flex items-center space-x-2 bg-burgundy-900 text-background px-6 py-3 hover:bg-burgundy-800 transition-colors duration-300 font-medium tracking-wide"
                   >
                     <ExternalLink size={16} />
-                    <span>Visit Profile</span>
+                    <span>Visit</span>
                   </a>
                 </div>
               </div>
