@@ -22,33 +22,6 @@ const Contact = () => {
     // Handle form submission logic here
   };
 
-  const contactInfo = [
-    {
-      icon: Mail,
-      title: "Email",
-      info: "hello@creativestudio.com",
-      action: "mailto:hello@creativestudio.com"
-    },
-    {
-      icon: Phone,
-      title: "Phone",
-      info: "+1 (555) 123-4567",
-      action: "tel:+15551234567"
-    },
-    {
-      icon: MapPin,
-      title: "Studio",
-      info: "Creative Quarter, Metropolitan District",
-      action: null
-    },
-    {
-      icon: Clock,
-      title: "Hours",
-      info: "Monday - Friday, 9:00 - 18:00",
-      action: null
-    }
-  ];
-
   return (
     <section id="contact" className="py-20 bg-gradient-to-br from-burgundy-50/30 to-amber-50/20 relative overflow-hidden">
       {/* Background decorations */}
@@ -69,10 +42,10 @@ const Contact = () => {
           </p>
         </div>
         
-        <div className="grid lg:grid-cols-2 gap-16">
-          {/* Contact Form */}
-          <div className="bg-card border border-amber-200 luxury-shadow p-10">
-            <h3 className="text-3xl font-display font-bold text-burgundy-900 mb-8">Send a Message</h3>
+        {/* Centered Contact Form */}
+        <div className="flex justify-center">
+          <div className="bg-card border border-amber-200 luxury-shadow p-10 w-full max-w-2xl">
+            <h3 className="text-3xl font-display font-bold text-burgundy-900 mb-8 text-center">Send a Message</h3>
             
             <form onSubmit={handleSubmit} className="space-y-6">
               <div className="grid md:grid-cols-2 gap-6">
@@ -149,37 +122,6 @@ const Contact = () => {
                 <span>Send Message</span>
               </button>
             </form>
-          </div>
-          
-          {/* Contact Info */}
-          <div className="space-y-8">
-            {/* Contact Information */}
-            <div className="bg-card border border-amber-200 luxury-shadow p-8">
-              <h3 className="text-2xl font-display font-bold text-burgundy-900 mb-8">Get in Touch</h3>
-              
-              <div className="space-y-6">
-                {contactInfo.map((info, index) => (
-                  <div key={index} className="flex items-start space-x-4">
-                    <div className="w-12 h-12 bg-gradient-to-br from-burgundy-900 to-burgundy-800 flex items-center justify-center flex-shrink-0">
-                      <info.icon className="w-6 h-6 text-background" />
-                    </div>
-                    <div>
-                      <h4 className="font-semibold text-burgundy-800 mb-1 tracking-wide">{info.title}</h4>
-                      {info.action ? (
-                        <a 
-                          href={info.action}
-                          className="text-muted-foreground hover:text-burgundy-700 transition-colors font-serif"
-                        >
-                          {info.info}
-                        </a>
-                      ) : (
-                        <p className="text-muted-foreground font-serif">{info.info}</p>
-                      )}
-                    </div>
-                  </div>
-                ))}
-              </div>
-            </div>
           </div>
         </div>
       </div>
