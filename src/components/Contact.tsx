@@ -84,7 +84,7 @@ const Contact = () => {
               
               <div>
                 <label htmlFor="subject" className="block text-sm font-medium text-burgundy-800 mb-3 tracking-wide">
-                  Project Type
+                  Subject
                 </label>
                 <input
                   type="text"
@@ -93,14 +93,14 @@ const Contact = () => {
                   value={formData.subject}
                   onChange={handleChange}
                   className="w-full px-4 py-4 border border-amber-300 bg-background focus:ring-2 focus:ring-burgundy-900 focus:border-transparent transition-all font-serif"
-                  placeholder="Brand Identity, Photography, Web Design..."
+                  placeholder="Music, Production or ..."
                   required
                 />
               </div>
               
               <div>
                 <label htmlFor="message" className="block text-sm font-medium text-burgundy-800 mb-3 tracking-wide">
-                  Project Details
+                  Message
                 </label>
                 <textarea
                   id="message"
@@ -109,7 +109,7 @@ const Contact = () => {
                   onChange={handleChange}
                   rows={6}
                   className="w-full px-4 py-4 border border-amber-300 bg-background focus:ring-2 focus:ring-burgundy-900 focus:border-transparent transition-all resize-none font-serif"
-                  placeholder="Tell me about your vision, timeline, and goals..."
+                  placeholder="Please input your message..."
                   required
                 ></textarea>
               </div>
