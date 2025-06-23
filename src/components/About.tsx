@@ -52,7 +52,7 @@ const About = () => {
             <div className="relative">
               <div className="aspect-[3/4] bg-gradient-to-br from-burgundy-50 to-amber-50 luxury-shadow border border-amber-200 overflow-hidden relative">
                 <img 
-                  src="https://wbuiebxqdjuxhvdtiata.supabase.co/storage/v1/object/sign/files/GECON/Brokers/Filler%20Image/Filler.jpg?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV9jMjU3NzlmNC01ZjdjLTRjZWEtYmM2MS1mYjMwZjllNzkxM2EiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJmaWxlcy9HRUNPTi9Ccm9rZXJzL0ZpbGxlciBJbWFnZS9GaWxsZXIuanBnIiwiaWF0IjoxNzUwMzUxMTQ4LCJleHAiOjIzODEwNzExNDh9.mNmjblQw3Kd5ewDrJnBdHzbbc2BvOFhJjYPgCyJo3PA"
+                  src="https://wbuiebxqdjuxhvdtiata.supabase.co/storage/v1/object/sign/gracie-pike/Hero/6efac577-be6a-458c-9675-953e9a5764f2.JPG?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV9jMjU3NzlmNC01ZjdjLTRjZWEtYmM2MS1mYjMwZjllNzkxM2EiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJncmFjaWUtcGlrZS9IZXJvLzZlZmFjNTc3LWJlNmEtNDU4Yy05Njc1LTk1M2U5YTU3NjRmMi5KUEciLCJpYXQiOjE3NTA2NTIyODUsImV4cCI6MjM4MTM3MjI4NX0.9HH33nItvE-5tHFbss7uYP_DG9RiMfBy3w042y7cL_A"
                   alt="Creative professional portrait"
                   className="w-full h-full object-cover"
                 />
