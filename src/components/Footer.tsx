@@ -3,7 +3,7 @@ import { Heart, Instagram, Twitter, Dribbble, Globe, ArrowUp } from 'lucide-reac
 const Footer = () => {
   const socialLinks = [
     { icon: Instagram, href: "https://instagram.com", label: "Instagram" },
-    { icon: Twitter, href: "https://twitter.com", label: "Twitter" },
+    { icon: Facebook, href: "https://facebook.com", label: "Facebook" },
     { icon: Dribbble, href: "https://dribbble.com", label: "Dribbble" },
     { icon: Globe, href: "https://portfolio.com", label: "Portfolio" }
   ];
