@@ -29,37 +29,37 @@ const Portfolio = () => {
       id: 1,
       name: "Spotify",
       url: "https://open.spotify.com/artist/23eu2aznCpnIJVgB8G5g7S?si=JuZLltgBRuKa5ssQ7dR6Qg",
-      imageUrl: "https://i.scdn.co/image/ab67616d0000b2730dd37e96b98133fb1f6bed3c"
+      imageUrl: "https://wbuiebxqdjuxhvdtiata.supabase.co/storage/v1/object/sign/gracie-pike/Socials/Spotify.jpg?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV9jMjU3NzlmNC01ZjdjLTRjZWEtYmM2MS1mYjMwZjllNzkxM2EiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJncmFjaWUtcGlrZS9Tb2NpYWxzL1Nwb3RpZnkuanBnIiwiaWF0IjoxNzUwNjg2MDgwLCJleHAiOjIzODE0MDYwODB9.6m5Hfm6P9GWnyw9VlOJcgeXEVl_A1yIz1f2_F8eAo40"
     },
     {
       id: 2,
       name: "Apple Music",
       url: "https://music.apple.com/us/artist/gracie-pike/210652860",
-      imageUrl: "https://i.scdn.co/image/ab67616d0000b2730dd37e96b98133fb1f6bed3c"
+      imageUrl: "https://wbuiebxqdjuxhvdtiata.supabase.co/storage/v1/object/sign/gracie-pike/Socials/apple-music.jpg?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV9jMjU3NzlmNC01ZjdjLTRjZWEtYmM2MS1mYjMwZjllNzkxM2EiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJncmFjaWUtcGlrZS9Tb2NpYWxzL2FwcGxlLW11c2ljLmpwZyIsImlhdCI6MTc1MDY4NjA1NywiZXhwIjoyMzgxNDA2MDU3fQ.cs9xRP0H14U5WfuYWBEUdW8NwRA65Gpt2ccZnsd-qJY"
     },
     {
       id: 3,
       name: "Instagram",
       url: "https://www.instagram.com/graciepikemusic?igsh=MTcxZzh6aWd4Y2ZzZQ%3D%3D&utm_source=qr",
-      imageUrl: "https://scontent-atl3-2.cdninstagram.com/v/t51.75761-19/509835994_18503670202045434_7804250483685154797_n.jpg?stp=dst-jpg_s100x100_tt6&_nc_cat=100&ccb=1-7&_nc_sid=bf7eb4&_nc_ohc=BCo_hjCoxGEQ7kNvwGkePrT&_nc_oc=AdkfHPKjOL6vhS0NXESrqqKocQZr0u0eFGle6MgrTERACVQgzAXcvW3e-pLYisiihVg&_nc_zt=24&_nc_ht=scontent-atl3-2.cdninstagram.com&_nc_gid=MIi20YcB4pMK1tzFVa3doQ&oh=00_AfPcck5G_nnCtWl3iagrHqql5eeMQCFpY1ndkvksor1z0g&oe=685D5260"
+      imageUrl: "https://wbuiebxqdjuxhvdtiata.supabase.co/storage/v1/object/sign/gracie-pike/Socials/Instagranm.webp?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV9jMjU3NzlmNC01ZjdjLTRjZWEtYmM2MS1mYjMwZjllNzkxM2EiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJncmFjaWUtcGlrZS9Tb2NpYWxzL0luc3RhZ3Jhbm0ud2VicCIsImlhdCI6MTc1MDY4NjA5NCwiZXhwIjoyMzgxNDA2MDk0fQ.BcPFiRridVfp08ntJny-C4sZ0twBH_a1gQ6zc3XeHbo"
     },
     {
       id: 4,
       name: "TikTok",
       url: "https://www.tiktok.com/@graciepike?_t=ZT-8xPA4vtgWli&_r=1",
-      imageUrl: "https://images.pexels.com/photos/7319070/pexels-photo-7319070.jpeg?auto=compress&cs=tinysrgb&w=600"
+      imageUrl: "https://wbuiebxqdjuxhvdtiata.supabase.co/storage/v1/object/sign/gracie-pike/Socials/Tiktok.webp?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV9jMjU3NzlmNC01ZjdjLTRjZWEtYmM2MS1mYjMwZjllNzkxM2EiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJncmFjaWUtcGlrZS9Tb2NpYWxzL1Rpa3Rvay53ZWJwIiwiaWF0IjoxNzUwNjg2MTE4LCJleHAiOjIzODE0MDYxMTh9.YmDQjnfIMp9hYOQSLkY831GfdlPa8z0MFS-6DqYoepk"
     },
     {
       id: 5,
       name: "YouTube",
       url: "https://youtube.com/@graciepike?si=Acjkjx6evx0vCtJV",
-      imageUrl: "https://images.pexels.com/photos/4491461/pexels-photo-4491461.jpeg?auto=compress&cs=tinysrgb&w=600"
+      imageUrl: "https://wbuiebxqdjuxhvdtiata.supabase.co/storage/v1/object/sign/gracie-pike/Socials/youtube-logo.webp?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV9jMjU3NzlmNC01ZjdjLTRjZWEtYmM2MS1mYjMwZjllNzkxM2EiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJncmFjaWUtcGlrZS9Tb2NpYWxzL3lvdXR1YmUtbG9nby53ZWJwIiwiaWF0IjoxNzUwNjg2MTMyLCJleHAiOjIzODE0MDYxMzJ9.GKCQKfsnqL6NZWuFXlxLAwi9En-4-0k1sjawyR1CHo4"
     },
     {
       id: 6,
       name: "Facebook",
       url: "https://www.facebook.com/share/1BjvCCZcFA/?mibextid=wwXIfr",
-      imageUrl: "https://images.pexels.com/photos/267350/pexels-photo-267350.jpeg?auto=compress&cs=tinysrgb&w=600"
+      imageUrl: "https://wbuiebxqdjuxhvdtiata.supabase.co/storage/v1/object/sign/gracie-pike/Socials/faceboojk.png?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV9jMjU3NzlmNC01ZjdjLTRjZWEtYmM2MS1mYjMwZjllNzkxM2EiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJncmFjaWUtcGlrZS9Tb2NpYWxzL2ZhY2Vib29qay5wbmciLCJpYXQiOjE3NTA2ODYxNDMsImV4cCI6MjM4MTQwNjE0M30.Fq7aAJSB1ftOhAt3se_WUfA6cF-s4DRVV6R7_vOGhCI"
     }
   ];
 
