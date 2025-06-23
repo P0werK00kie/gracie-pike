@@ -27,7 +27,7 @@ const Hero = () => {
             {/* Main Heading */}
             <h1 className="text-6xl md:text-7xl font-display font-bold leading-tight">
               <span className="block text-burgundy-900 mb-2">Songs</span>
-              <span className="block text-foreground">Of</span>
+              <span className="block text-foreground">of</span>
               <span className="block text-amber-600 text-5xl md:text-6xl mt-2">Grace</span>
             </h1>
             
