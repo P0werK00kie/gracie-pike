@@ -21,16 +21,6 @@ const Portfolio = () => {
         "https://wbuiebxqdjuxhvdtiata.supabase.co/storage/v1/object/sign/gracie-pike/Portfolio/music%20production.webp?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV9jMjU3NzlmNC01ZjdjLTRjZWEtYmM2MS1mYjMwZjllNzkxM2EiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJncmFjaWUtcGlrZS9Qb3J0Zm9saW8vbXVzaWMgcHJvZHVjdGlvbi53ZWJwIiwiaWF0IjoxNzUwNjg5OTY5LCJleHAiOjIzODE0MDk5Njl9.sWot3jk8p6J5Aq5OozPuTH9-4QZztoZDteZZnj5gZzM"
       ],
       description: "From songwriting to the final track, I pour my heart into every aspect of my music at my own production company."
-    },
-    {
-      id: 3,
-      title: "Creative Photography",
-      category: "Photography",
-      images: [
-        "https://images.unsplash.com/photo-1433086966358-54859d0ed716?auto=format&fit=crop&w=600&q=80",
-        "https://images.unsplash.com/photo-1470813740244-df37b8c1edcb?auto=format&fit=crop&w=100&q=80"
-      ],
-      description: "Capturing moments and creating visual stories that resonate with the heart and soul."
     }
   ];
 
