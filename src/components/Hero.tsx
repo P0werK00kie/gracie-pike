@@ -26,15 +26,14 @@ const Hero = () => {
             
             {/* Main Heading */}
             <h1 className="text-6xl md:text-7xl font-display font-bold leading-tight">
-              <span className="block text-burgundy-900 mb-2">Lorem</span>
-              <span className="block text-foreground">ipsum</span>
-              <span className="block text-amber-600 text-5xl md:text-6xl mt-2">dolor</span>
+              <span className="block text-burgundy-900 mb-2">Songs</span>
+              <span className="block text-foreground">Of</span>
+              <span className="block text-amber-600 text-5xl md:text-6xl mt-2">Grace</span>
             </h1>
             
             {/* Subheading */}
             <p className="text-xl md:text-2xl text-muted-foreground leading-relaxed max-w-xl font-serif">
-              Vestibulum faucibus blandit dui. Pellentesque habitant morbi tristique
-              senectus et netus et malesuada fames ac turpis egestas.            
+               I've always been a storyteller in song, weaving my deep-seated faith and country roots into every note. I hope my music takes you on a journey of hope, reflection, and unwavering belief in God's presence in every season of life.            
             </p>
             
             {/* CTA Buttons */}
