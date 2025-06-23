@@ -26,15 +26,14 @@ const Hero = () => {
             
             {/* Main Heading */}
             <h1 className="text-6xl md:text-7xl font-display font-bold leading-tight">
-              <span className="block text-burgundy-900 mb-2">Lorem</span>
-              <span className="block text-foreground">ipsum</span>
-              <span className="block text-amber-600 text-5xl md:text-6xl mt-2">dolor</span>
+              <span className="block text-burgundy-900 mb-2">Songs</span>
+              <span className="block text-foreground">of</span>
+              <span className="block text-amber-600 text-5xl md:text-6xl mt-2">Grace</span>
             </h1>
             
             {/* Subheading */}
             <p className="text-xl md:text-2xl text-muted-foreground leading-relaxed max-w-xl font-serif">
-              Vestibulum faucibus blandit dui. Pellentesque habitant morbi tristique
-              senectus et netus et malesuada fames ac turpis egestas.            
+               I've always been a storyteller in song, weaving my deep-seated faith and country roots into every note. I hope my music takes you on a journey of hope, reflection, and unwavering belief in God's presence in every season of life.            
             </p>
             
             {/* CTA Buttons */}
@@ -60,7 +59,7 @@ const Hero = () => {
             <div className="relative group">
               <div className="aspect-[4/5] bg-gradient-to-br from-burgundy-100 to-amber-50 luxury-shadow border border-amber-200 relative overflow-hidden">
                 <img 
-                  src="https://wbuiebxqdjuxhvdtiata.supabase.co/storage/v1/object/sign/files/GECON/Brokers/Filler%20Image/Filler.jpg?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV9jMjU3NzlmNC01ZjdjLTRjZWEtYmM2MS1mYjMwZjllNzkxM2EiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJmaWxlcy9HRUNPTi9Ccm9rZXJzL0ZpbGxlciBJbWFnZS9GaWxsZXIuanBnIiwiaWF0IjoxNzUwMzUxMTQ4LCJleHAiOjIzODEwNzExNDh9.mNmjblQw3Kd5ewDrJnBdHzbbc2BvOFhJjYPgCyJo3PA"
+                  src="https://wbuiebxqdjuxhvdtiata.supabase.co/storage/v1/object/sign/gracie-pike/Hero/83b44830-1882-41a6-bf3b-739b46cc4def.JPG?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV9jMjU3NzlmNC01ZjdjLTRjZWEtYmM2MS1mYjMwZjllNzkxM2EiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJncmFjaWUtcGlrZS9IZXJvLzgzYjQ0ODMwLTE4ODItNDFhNi1iZjNiLTczOWI0NmNjNGRlZi5KUEciLCJpYXQiOjE3NTA2NTIxNTUsImV4cCI6MjM4MTM3MjE1NX0.5a3rV1zf2kwXD9L95O4BJm4UONIjyG3WQgi8QTIj_N0"
                   alt="Featured creative work"
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
                 />
@@ -74,7 +73,7 @@ const Hero = () => {
             {/* Secondary images */}
             <div className="absolute -bottom-8 -right-8 w-32 h-32 bg-gradient-to-br from-amber-100 to-burgundy-50 luxury-shadow border border-burgundy-200 overflow-hidden">
               <img 
-                src="https://wbuiebxqdjuxhvdtiata.supabase.co/storage/v1/object/sign/files/GECON/Brokers/Filler%20Image/Filler.jpg?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV9jMjU3NzlmNC01ZjdjLTRjZWEtYmM2MS1mYjMwZjllNzkxM2EiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJmaWxlcy9HRUNPTi9Ccm9rZXJzL0ZpbGxlciBJbWFnZS9GaWxsZXIuanBnIiwiaWF0IjoxNzUwMzUxMTQ4LCJleHAiOjIzODEwNzExNDh9.mNmjblQw3Kd5ewDrJnBdHzbbc2BvOFhJjYPgCyJo3PA"
+                src="https://i.scdn.co/image/ab67616d0000b2730dd37e96b98133fb1f6bed3c"
                 alt="Creative detail"
                 className="w-full h-full object-cover"
               />

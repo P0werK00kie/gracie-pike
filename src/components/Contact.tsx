@@ -1,4 +1,3 @@
-
 import { Mail, Phone, MapPin, Send, Clock } from 'lucide-react';
 import { useState } from 'react';
 
@@ -51,14 +50,14 @@ const Contact = () => {
   ];
 
   return (
-    <section id="contact" className="py-24 bg-gradient-to-br from-burgundy-50/30 to-amber-50/20 relative overflow-hidden">
+    <section id="contact" className="py-20 bg-gradient-to-br from-burgundy-50/30 to-amber-50/20 relative overflow-hidden">
       {/* Background decorations */}
       <div className="absolute top-10 right-10 w-64 h-64 border border-burgundy-200 opacity-10 rotate-45"></div>
       <div className="absolute bottom-10 left-10 w-48 h-48 bg-amber-400 opacity-5 -rotate-12"></div>
       
       <div className="container mx-auto px-6 relative z-10">
         {/* Section Header */}
-        <div className="text-center mb-20 ornamental-border pb-8">
+        <div className="text-center mb-16 ornamental-border pb-8">
           <h2 className="text-5xl md:text-6xl font-display font-bold mb-6">
             <span className="text-burgundy-900">Let's Create</span>
             <span className="block text-amber-600 text-4xl md:text-5xl mt-2">Something Extraordinary</span>
@@ -152,7 +151,7 @@ const Contact = () => {
             </form>
           </div>
           
-          {/* Contact Info & Studio Images */}
+          {/* Contact Info */}
           <div className="space-y-8">
             {/* Contact Information */}
             <div className="bg-card border border-amber-200 luxury-shadow p-8">
@@ -180,34 +179,6 @@ const Contact = () => {
                   </div>
                 ))}
               </div>
-            </div>
-            
-            {/* Studio Glimpse */}
-            <div className="bg-gradient-to-br from-burgundy-900 to-burgundy-800 text-background p-8 luxury-shadow">
-              <h3 className="text-2xl font-display font-bold mb-6">Studio Glimpse</h3>
-              
-              <div className="grid grid-cols-2 gap-4 mb-6">
-                <div className="aspect-square bg-burgundy-700 overflow-hidden">
-                  <img 
-                    src="https://wbuiebxqdjuxhvdtiata.supabase.co/storage/v1/object/sign/files/GECON/Brokers/Filler%20Image/Filler.jpg?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV9jMjU3NzlmNC01ZjdjLTRjZWEtYmM2MS1mYjMwZjllNzkxM2EiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJmaWxlcy9HRUNPTi9Ccm9rZXJzL0ZpbGxlciBJbWFnZS9GaWxsZXIuanBnIiwiaWF0IjoxNzUwMzUxMTQ4LCJleHAiOjIzODEwNzExNDh9.mNmjblQw3Kd5ewDrJnBdHzbbc2BvOFhJjYPgCyJo3PA"
-                    alt="Studio workspace"
-                    className="w-full h-full object-cover opacity-80"
-                  />
-                </div>
-                <div className="aspect-square bg-burgundy-700 overflow-hidden">
-                  <img 
-                    src="https://wbuiebxqdjuxhvdtiata.supabase.co/storage/v1/object/sign/files/GECON/Brokers/Filler%20Image/Filler.jpg?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV9jMjU3NzlmNC01ZjdjLTRjZWEtYmM2MS1mYjMwZjllNzkxM2EiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJmaWxlcy9HRUNPTi9Ccm9rZXJzL0ZpbGxlciBJbWFnZS9GaWxsZXIuanBnIiwiaWF0IjoxNzUwMzUxMTQ4LCJleHAiOjIzODEwNzExNDh9.mNmjblQw3Kd5ewDrJnBdHzbbc2BvOFhJjYPgCyJo3PA"
-                    alt="Creative process"
-                    className="w-full h-full object-cover opacity-80"
-                  />
-                </div>
-              </div>
-              
-              <p className="text-burgundy-100 leading-relaxed font-serif mb-6">
-                "Excellence is never an accident. It is always the result of high intention, 
-                sincere effort, and intelligent execution."
-              </p>
-              <p className="text-amber-300 font-medium">— Studio Philosophy</p>
             </div>
           </div>
         </div>
