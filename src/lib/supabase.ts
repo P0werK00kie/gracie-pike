@@ -9,7 +9,7 @@ if (!supabaseUrl || !supabaseAnonKey) {
 
 export const supabase = createClient(supabaseUrl, supabaseAnonKey);
 
-export type ContactSubmission = {
+export type GraciePikeContactSubmission = {
   id?: string;
   name: string;
   email: string;

@@ -1,6 +1,6 @@
 import { Mail, Phone, MapPin, Send, Clock } from 'lucide-react';
 import { useState } from 'react';
-import { supabase, type ContactSubmission } from '@/lib/supabase';
+import { supabase, type GraciePikeContactSubmission } from '@/lib/supabase';
 import { toast } from '@/components/ui/sonner';
 
 const Contact = () => {
@@ -38,7 +38,7 @@ const Contact = () => {
     setIsSubmitting(true);
 
     try {
-      const submission: Omit<ContactSubmission, 'id' | 'created_at' | 'updated_at'> = {
+      const submission: Omit<GraciePikeContactSubmission, 'id' | 'created_at' | 'updated_at'> = {
         name: formData.name.trim(),
         email: formData.email.trim(),
         subject: formData.subject.trim(),
@@ -46,7 +46,7 @@ const Contact = () => {
       };
 
       const { data, error } = await supabase
-        .from('contact_submissions')
+        .from('Gracie_Pike_Contact')
         .insert([submission])
         .select();
 
