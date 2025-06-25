@@ -1,5 +1,7 @@
 import { Mail, Phone, MapPin, Send, Clock } from 'lucide-react';
 import { useState } from 'react';
+import { supabase, type ContactSubmission } from '@/lib/supabase';
+import { toast } from '@/components/ui/sonner';
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -8,6 +10,7 @@ const Contact = () => {
     subject: '',
     message: ''
   });
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     setFormData({
@@ -16,10 +19,60 @@ const Contact = () => {
     });
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    console.log('Form submitted:', formData);
-    // Handle form submission logic here
+    
+    // Basic validation
+    if (!formData.name || !formData.email || !formData.subject || !formData.message) {
+      toast.error('Please fill in all fields');
+      return;
+    }
+
+    // Email validation
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailRegex.test(formData.email)) {
+      toast.error('Please enter a valid email address');
+      return;
+    }
+
+    setIsSubmitting(true);
+
+    try {
+      const submission: Omit<ContactSubmission, 'id' | 'created_at' | 'updated_at'> = {
+        name: formData.name.trim(),
+        email: formData.email.trim(),
+        subject: formData.subject.trim(),
+        message: formData.message.trim()
+      };
+
+      const { data, error } = await supabase
+        .from('contact_submissions')
+        .insert([submission])
+        .select();
+
+      if (error) {
+        console.error('Supabase error:', error);
+        toast.error('Failed to send message. Please try again.');
+        return;
+      }
+
+      // Success
+      toast.success('Thank you! Your message has been sent successfully.');
+      
+      // Reset form
+      setFormData({
+        name: '',
+        email: '',
+        subject: '',
+        message: ''
+      });
+
+    } catch (error) {
+      console.error('Unexpected error:', error);
+      toast.error('An unexpected error occurred. Please try again.');
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -51,7 +104,7 @@ const Contact = () => {
               <div className="grid md:grid-cols-2 gap-6">
                 <div>
                   <label htmlFor="name" className="block text-sm font-medium text-burgundy-800 mb-3 tracking-wide">
-                    Your Name
+                    Your Name *
                   </label>
                   <input
                     type="text"
@@ -62,12 +115,13 @@ const Contact = () => {
                     className="w-full px-4 py-4 border border-amber-300 bg-background focus:ring-2 focus:ring-burgundy-900 focus:border-transparent transition-all font-serif"
                     placeholder="Enter your name"
                     required
+                    disabled={isSubmitting}
                   />
                 </div>
                 
                 <div>
                   <label htmlFor="email" className="block text-sm font-medium text-burgundy-800 mb-3 tracking-wide">
-                    Email Address
+                    Email Address *
                   </label>
                   <input
                     type="email"
@@ -78,13 +132,14 @@ const Contact = () => {
                     className="w-full px-4 py-4 border border-amber-300 bg-background focus:ring-2 focus:ring-burgundy-900 focus:border-transparent transition-all font-serif"
                     placeholder="Enter your email"
                     required
+                    disabled={isSubmitting}
                   />
                 </div>
               </div>
               
               <div>
                 <label htmlFor="subject" className="block text-sm font-medium text-burgundy-800 mb-3 tracking-wide">
-                  Subject
+                  Subject *
                 </label>
                 <input
                   type="text"
@@ -95,12 +150,13 @@ const Contact = () => {
                   className="w-full px-4 py-4 border border-amber-300 bg-background focus:ring-2 focus:ring-burgundy-900 focus:border-transparent transition-all font-serif"
                   placeholder="Music, Production or ..."
                   required
+                  disabled={isSubmitting}
                 />
               </div>
               
               <div>
                 <label htmlFor="message" className="block text-sm font-medium text-burgundy-800 mb-3 tracking-wide">
-                  Message
+                  Message *
                 </label>
                 <textarea
                   id="message"
@@ -111,15 +167,17 @@ const Contact = () => {
                   className="w-full px-4 py-4 border border-amber-300 bg-background focus:ring-2 focus:ring-burgundy-900 focus:border-transparent transition-all resize-none font-serif"
                   placeholder="Please input your message..."
                   required
+                  disabled={isSubmitting}
                 ></textarea>
               </div>
               
               <button
                 type="submit"
-                className="w-full bg-burgundy-900 text-background py-4 font-medium hover:bg-burgundy-800 transition-colors duration-300 shadow-lg hover:shadow-xl flex items-center justify-center space-x-3 tracking-wide"
+                disabled={isSubmitting}
+                className="w-full bg-burgundy-900 text-background py-4 font-medium hover:bg-burgundy-800 transition-colors duration-300 shadow-lg hover:shadow-xl flex items-center justify-center space-x-3 tracking-wide disabled:opacity-50 disabled:cursor-not-allowed"
               >
                 <Send size={20} />
-                <span>Send Message</span>
+                <span>{isSubmitting ? 'Sending...' : 'Send Message'}</span>
               </button>
             </form>
           </div>
