@@ -2,10 +2,10 @@ import { Heart, Instagram, Twitter, Dribbble, Globe, ArrowUp, Facebook } from 'l
 
 const Footer = () => {
   const socialLinks = [
-    { icon: Instagram, href: "https://instagram.com", label: "Instagram" },
-    { icon: Facebook, href: "https://facebook.com", label: "Facebook" },
-    { icon: Dribbble, href: "https://dribbble.com", label: "Dribbble" },
-    { icon: Globe, href: "https://portfolio.com", label: "Portfolio" }
+    { icon: Instagram, href: "https://www.instagram.com/graciepikemusic?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==", label: "Instagram" },
+    { icon: Facebook, href: "https://www.facebook.com/graciepikefanpage?mibextid=wwXIfr&rdid=fg4TOoPa3AoLh1cX&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F1BjvCCZcFA%2F%3Fmibextid%3DwwXIfr", label: "Facebook" },
+    { icon: Dribbble, href: "https://www.youtube.com/@graciepike", label: "Dribbble" },
+    { icon: Globe, href: "https://music.apple.com/us/artist/gracie-pike/210652860", label: "Portfolio" }
   ];
 
   const scrollToTop = () => {
