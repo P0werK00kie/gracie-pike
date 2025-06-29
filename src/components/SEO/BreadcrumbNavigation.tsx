@@ -1,5 +1,5 @@
 import React from 'react';
-import { ChevronRight, Home } from 'lucide-react';
+import { ChevronRight } from 'lucide-react';
 
 interface BreadcrumbItem {
   label: string;
@@ -24,22 +24,19 @@ const BreadcrumbNavigation: React.FC<BreadcrumbNavigationProps> = ({ items, clas
     }
   };
 
+  // Don't render anything if there are no items
+  if (!items || items.length === 0) {
+    return null;
+  }
+
   return (
     <nav 
       aria-label="Breadcrumb" 
       className={`flex items-center space-x-2 text-sm text-muted-foreground ${className}`}
     >
-      <button
-        onClick={() => scrollToSection('/')}
-        className="flex items-center hover:text-burgundy-700 transition-colors"
-        aria-label="Home"
-      >
-        <Home size={16} />
-      </button>
-      
       {items.map((item, index) => (
         <React.Fragment key={index}>
-          <ChevronRight size={14} className="text-muted-foreground" />
+          {index > 0 && <ChevronRight size={14} className="text-muted-foreground" />}
           <button
             onClick={() => scrollToSection(item.href)}
             className={`hover:text-burgundy-700 transition-colors ${
