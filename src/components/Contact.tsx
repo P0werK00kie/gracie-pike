@@ -20,7 +20,8 @@ const Contact = () => {
     email: '',
     preferred_date: '',
     preferred_time: '',
-    message: ''
+    message: '',
+    location: ''
   });
   const [isBookingSubmitting, setIsBookingSubmitting] = useState(false);
 
@@ -101,7 +102,7 @@ const Contact = () => {
     
     // Basic validation
     if (!bookingFormData.full_name || !bookingFormData.phone_number || !bookingFormData.email || 
-        !bookingFormData.preferred_date || !bookingFormData.preferred_time) {
+        !bookingFormData.preferred_date || !bookingFormData.preferred_time || !bookingFormData.location) {
       toast.error('Please fill in all required fields');
       return;
     }
@@ -138,6 +139,7 @@ const Contact = () => {
         email: bookingFormData.email.trim(),
         preferred_date: bookingFormData.preferred_date,
         preferred_time: bookingFormData.preferred_time,
+        location: bookingFormData.location.trim(),
         message: bookingFormData.message.trim() || null
       };
 
@@ -162,7 +164,8 @@ const Contact = () => {
         email: '',
         preferred_date: '',
         preferred_time: '',
-        message: ''
+        message: '',
+        location: ''
       });
 
     } catch (error) {
@@ -340,6 +343,23 @@ const Contact = () => {
                       disabled={isBookingSubmitting}
                     />
                   </div>
+                </div>
+
+                <div>
+                  <label htmlFor="booking-location" className="block text-sm font-medium text-burgundy-800 mb-3 tracking-wide">
+                    City & State *
+                  </label>
+                  <input
+                    type="text"
+                    id="booking-location"
+                    name="location"
+                    value={bookingFormData.location}
+                    onChange={handleBookingChange}
+                    className="w-full px-4 py-4 border border-amber-300 bg-background focus:ring-2 focus:ring-burgundy-900 focus:border-transparent transition-all font-serif"
+                    placeholder="e.g., Atlanta, GA"
+                    required
+                    disabled={isBookingSubmitting}
+                  />
                 </div>
 
                 <div className="grid md:grid-cols-2 gap-6">
