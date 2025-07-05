@@ -28,4 +28,5 @@ export type ShowBookingSubmission = {
   preferred_date: string;
   preferred_time: string;
   message?: string;
+  location: string;
 };
