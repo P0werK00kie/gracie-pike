@@ -159,7 +159,7 @@ const Portfolio = () => {
                     className="flex items-center text-burgundy-700 font-medium hover:text-amber-600 transition-colors group/btn"
                     aria-label={`Explore ${project.title} project`}
                   >
-                    <span>Explore Project</span>
+                    <span>Learn More</span>
                     <ChevronRight size={16} className="ml-2 group-hover/btn:translate-x-1 transition-transform" />
                   </button>
                 </div>
