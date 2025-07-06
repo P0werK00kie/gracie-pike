@@ -8,7 +8,7 @@ const Portfolio = () => {
       title: "Wishing Well",
       category: "Music",
       images: [
-        "https://wbuiebxqdjuxhvdtiata.supabase.co/storage/v1/object/sign/gracie-pike/Portfolio/Gracie%20Singing.webp?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV9jMjU3NzlmNC01ZjdjLTRjZWEtYmM2MS1mYjMwZjllNzkxM2EiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJncmFjaWUtcGlrZS9Qb3J0Zm9saW8vR3JhY2llIFNpbmdpbmcud2VicCIsImlhdCI6MTc1MDc3MjA4NiwiZXhwIjoyMzgxNDkyMDg2fQ.xqR_jeYAI2cwUcl9YZuABWO93q6ShJJiIEK8REmgYgM",
+        "https://wbuiebxqdjuxhvdtiata.supabase.co/storage/v1/object/sign/gracie-pike/Portfolio/Cover.jpg?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV9jMjU3NzlmNC01ZjdjLTRjZWEtYmM2MS1mYjMwZjllNzkxM2EiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJncmFjaWUtcGlrZS9Qb3J0Zm9saW8vQ292ZXIuanBnIiwiaWF0IjoxNzUxODE1NTI5LCJleHAiOjIzODI1MzU1Mjl9.VuTyZROnK_C3xfedZZ2R01qVgJTSCSFbavQmfbIzJ10",
         "https://wbuiebxqdjuxhvdtiata.supabase.co/storage/v1/object/sign/gracie-pike/Portfolio/music.webp?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV9jMjU3NzlmNC01ZjdjLTRjZWEtYmM2MS1mYjMwZjllNzkxM2EiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJncmFjaWUtcGlrZS9Qb3J0Zm9saW8vbXVzaWMud2VicCIsImlhdCI6MTc1MDY4OTgxOCwiZXhwIjoyMzgxNDA5ODE4fQ.2e3NKDMayqJTRUJ1n_fwYlW7YwAVUBNDvbRymNJDytk"
       ],
       description: "Don't treat God like a wishing well..",
