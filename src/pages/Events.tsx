@@ -51,14 +51,8 @@ const Events = () => {
         { 
           date: "2025-09-06", 
           startTime: "15:00", 
-          endTime: "17:00",
-          description: "Meet and greet with Gracie"
-        },
-        { 
-          date: "2025-09-06", 
-          startTime: "19:00", 
-          endTime: "21:30",
-          description: "Closing night, with live performance of Gracie's albums."
+          endTime: "21:00",
+          description: "Meet and greet with Gracie starts at 3:00pm, Singing starts at 7:00pm"
         }
       ],
       locationName: "Wayfarer Music Hall",
