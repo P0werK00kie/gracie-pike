@@ -198,7 +198,7 @@ END:VCALENDAR`;
                 </h1>
                 <div className="w-24 h-0.5 bg-amber-400 mx-auto mb-6" aria-hidden="true"></div>
                 <p className="text-xl text-muted-foreground max-w-2xl mx-auto leading-relaxed font-serif">
-                  Join Gracie Pike for intimate concerts, inspiring workshops, and special events that celebrate 
+                  Join Gracie Pike for concerts, inspiring workshops, and special events that celebrate 
                   the power of faith-driven music and community.
                 </p>
               </div>
