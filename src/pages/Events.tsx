@@ -55,13 +55,12 @@ const Events = () => {
           description: "Full band performance with special guest appearances and audience favorites"
         }
       ],
-      locationName: "Historic Ryman Auditorium",
-      locationAddress: "116 Rep. John Lewis Way N, Nashville, TN 37219",
+      locationName: "Wayfarer Music Hall",
+      locationAddress: "123 North Lumpkin St, Monroe, GA 30655",
       hotelBookings: [
         {
           name: "The Hermitage Hotel",
-          website: "https://www.thehermitagehotel.com",
-          phone: "(615) 244-3121"
+          website: "https://www.vrbo.com/search?destination=Monroe%2C%20Georgia%2C%20United%20States%20of%20America&regionId=8678&latLong=33.794838%2C-83.713226&flexibility=0_DAY&d1=2025-09-05&startDate=2025-09-05&d2=2025-09-07&endDate=2025-09-07&adults=2&upsellingNumNightsAdded=&theme=&userIntent=&semdtl=&upsellingDiscountTypeAdded=&categorySearch=&sort=RECOMMENDED"
         },
         {
           name: "Omni Nashville Hotel",
