@@ -68,9 +68,9 @@ const Events = () => {
         }
       ],
       nearestAirport: {
-        name: "Nashville International Airport",
-        code: "BNA",
-        website: "https://www.flynashville.com"
+        name: "Hartsfield Jackson International Airport",
+        code: "ATL",
+        website: "https://www.atl.com/"
       }
     }
   ];
