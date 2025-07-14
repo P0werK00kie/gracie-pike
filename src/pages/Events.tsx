@@ -63,7 +63,6 @@ const Events = () => {
         website: "https://www.flynashville.com"
       }
     }
-    }
   ];
 
   const formatDate = (dateString: string) => {
