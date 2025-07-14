@@ -38,8 +38,8 @@ const Events = () => {
   const events: Event[] = [
     {
       id: 1,
-      title: "Live At The Wayfarer",
-      description: "Join Gracie Pike for a 2 days live event of country gospel music, featuring songs from her latest album and beloved classics that speak to the heart.",
+      title: "Live At The Wayfarer Music Hall",
+      description: "Join Gracie Pike for a 2 days live event of southern gospel music, featuring songs from her latest album and beloved classics that speak to the heart.",
       image: "https://images.pexels.com/photos/1763075/pexels-photo-1763075.jpeg?auto=compress&cs=tinysrgb&w=800",
       dates: [
         { 
@@ -177,7 +177,7 @@ END:VCALENDAR`;
       <MetaTags
         title="Events | Gracie Pike - Upcoming Concerts & Workshops"
         description="Join Gracie Pike at upcoming country gospel concerts, faith-based music workshops, and special events. Find dates, locations, and booking information for all performances."
-        keywords="Gracie Pike events, country gospel concerts, music workshops, Georgia concerts, faith-based music events, live performances"
+        keywords="Gracie Pike events, southern gospel concerts, music workshops, Georgia concerts, faith-based music events, live performances"
         url="https://graciepike.com/events"
       />
       
