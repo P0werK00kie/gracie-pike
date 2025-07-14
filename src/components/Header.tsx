@@ -8,13 +8,20 @@ const Header = () => {
   const navItems = [
     { label: 'Portfolio', href: '#portfolio' },
     { label: 'About', href: '#about' },
+    { label: 'Events', href: '/events' },
     { label: 'Contact / Book', href: '#contact' }
   ];
 
-  const scrollToSection = (href: string) => {
-    const element = document.querySelector(href);
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
+  const handleNavigation = (href: string) => {
+    if (href.startsWith('#')) {
+      // Handle anchor links (scroll to section)
+      const element = document.querySelector(href);
+      if (element) {
+        element.scrollIntoView({ behavior: 'smooth' });
+      }
+    } else {
+      // Handle page navigation
+      window.location.href = href;
     }
     setIsMenuOpen(false);
   };
@@ -63,7 +70,7 @@ const Header = () => {
           <div className="text-left">
             <h1 className="text-3xl md:text-4xl font-display font-bold text-burgundy-900 tracking-wide">
               <button 
-                onClick={() => scrollToSection('#')}
+                onClick={() => window.location.href = '/'}
                 className="relative hover:text-burgundy-700 transition-colors"
                 aria-label="Gracie Pike - Return to home"
               >
@@ -78,7 +85,7 @@ const Header = () => {
             {navItems.map((item) => (
               <button
                 key={item.label}
-                onClick={() => scrollToSection(item.href)}
+                onClick={() => handleNavigation(item.href)}
                 className="text-foreground hover:text-burgundy-700 transition-colors duration-300 font-medium text-lg tracking-wide relative group"
                 aria-label={`Navigate to ${item.label} section`}
               >
@@ -111,7 +118,7 @@ const Header = () => {
               {navItems.map((item) => (
                 <button
                   key={item.label}
-                  onClick={() => scrollToSection(item.href)}
+                  onClick={() => handleNavigation(item.href)}
                   className="text-foreground hover:text-burgundy-700 transition-colors duration-300 font-medium text-lg text-left py-2"
                   aria-label={`Navigate to ${item.label} section`}
                 >
