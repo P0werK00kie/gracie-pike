@@ -36,8 +36,8 @@ const Events = () => {
   const events: Event[] = [
     {
       id: 1,
-      title: "Country Gospel Concert Series",
-      description: "Join Gracie Pike for an intimate evening of country gospel music, featuring songs from her latest album and beloved classics that speak to the heart.",
+      title: "Live At The Wayfarer",
+      description: "Join Gracie Pike for a 2 days live event of country gospel music, featuring songs from her latest album and beloved classics that speak to the heart.",
       image: "https://images.pexels.com/photos/1763075/pexels-photo-1763075.jpeg?auto=compress&cs=tinysrgb&w=800",
       dates: [
         { date: "2025-03-15", time: "19:00" },
