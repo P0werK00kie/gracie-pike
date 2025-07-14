@@ -6,7 +6,9 @@ import OptimizedImage from '@/components/SEO/ImageOptimization';
 
 interface EventDate {
   date: string;
-  time: string;
+  startTime: string;
+  endTime: string;
+  description: string;
 }
 
 interface HotelBooking {
@@ -40,8 +42,18 @@ const Events = () => {
       description: "Join Gracie Pike for a 2 days live event of country gospel music, featuring songs from her latest album and beloved classics that speak to the heart.",
       image: "https://images.pexels.com/photos/1763075/pexels-photo-1763075.jpeg?auto=compress&cs=tinysrgb&w=800",
       dates: [
-        { date: "2025-03-15", time: "19:00" },
-        { date: "2025-03-16", time: "19:00" }
+        { 
+          date: "2025-03-15", 
+          startTime: "19:00", 
+          endTime: "21:30",
+          description: "Opening night featuring acoustic sets and intimate storytelling through song"
+        },
+        { 
+          date: "2025-03-16", 
+          startTime: "19:00", 
+          endTime: "21:30",
+          description: "Full band performance with special guest appearances and audience favorites"
+        }
       ],
       locationName: "Historic Ryman Auditorium",
       locationAddress: "116 Rep. John Lewis Way N, Nashville, TN 37219",
@@ -84,6 +96,76 @@ const Events = () => {
       minute: '2-digit',
       hour12: true
     });
+  };
+
+  const generateCalendarEvent = (event: Event, dateTime: EventDate) => {
+    const eventDate = new Date(dateTime.date);
+    const [startHours, startMinutes] = dateTime.startTime.split(':');
+    const [endHours, endMinutes] = dateTime.endTime.split(':');
+    
+    const startDateTime = new Date(eventDate);
+    startDateTime.setHours(parseInt(startHours), parseInt(startMinutes));
+    
+    const endDateTime = new Date(eventDate);
+    endDateTime.setHours(parseInt(endHours), parseInt(endMinutes));
+    
+    // Format dates for calendar (YYYYMMDDTHHMMSS format)
+    const formatCalendarDate = (date: Date) => {
+      return date.toISOString().replace(/[-:]/g, '').split('.')[0] + 'Z';
+    };
+    
+    const startFormatted = formatCalendarDate(startDateTime);
+    const endFormatted = formatCalendarDate(endDateTime);
+    
+    // Create Google Calendar URL
+    const googleCalendarUrl = `https://calendar.google.com/calendar/render?action=TEMPLATE&text=${encodeURIComponent(event.title)}&dates=${startFormatted}/${endFormatted}&details=${encodeURIComponent(`${event.description}\n\n${dateTime.description}\n\nLocation: ${event.locationName}\n${event.locationAddress}`)}&location=${encodeURIComponent(`${event.locationName}, ${event.locationAddress}`)}`;
+    
+    // Create ICS file content for other calendar apps
+    const icsContent = `BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Gracie Pike//Events//EN
+BEGIN:VEVENT
+UID:${event.id}-${dateTime.date}-${dateTime.startTime}@graciepike.com
+DTSTAMP:${formatCalendarDate(new Date())}
+DTSTART:${startFormatted}
+DTEND:${endFormatted}
+SUMMARY:${event.title}
+DESCRIPTION:${event.description}\\n\\n${dateTime.description}
+LOCATION:${event.locationName}, ${event.locationAddress}
+END:VEVENT
+END:VCALENDAR`;
+    
+    return { googleCalendarUrl, icsContent };
+  };
+  
+  const handleAddToCalendar = (event: Event, dateTime: EventDate) => {
+    const { googleCalendarUrl, icsContent } = generateCalendarEvent(event, dateTime);
+    
+    // Detect if user is on mobile or desktop
+    const isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+    
+    if (isMobile) {
+      // For mobile, try to open Google Calendar directly
+      window.open(googleCalendarUrl, '_blank');
+    } else {
+      // For desktop, show options
+      const userChoice = confirm('Add to Google Calendar? Click OK for Google Calendar, Cancel to download ICS file for other calendar apps.');
+      
+      if (userChoice) {
+        window.open(googleCalendarUrl, '_blank');
+      } else {
+        // Download ICS file
+        const blob = new Blob([icsContent], { type: 'text/calendar' });
+        const url = window.URL.createObjectURL(blob);
+        const link = document.createElement('a');
+        link.href = url;
+        link.download = `${event.title.replace(/[^a-z0-9]/gi, '_').toLowerCase()}_${dateTime.date}.ics`;
+        document.body.appendChild(link);
+        link.click();
+        document.body.removeChild(link);
+        window.URL.revokeObjectURL(url);
+      }
+    }
   };
 
   return (
@@ -174,11 +256,28 @@ const Events = () => {
                               </h3>
                               <div className="space-y-2">
                                 {event.dates.map((dateTime, idx) => (
-                                  <div key={idx} className="flex items-center text-muted-foreground">
-                                    <Clock className="w-4 h-4 mr-2 text-amber-600" />
-                                    <span className="font-serif">
-                                      {formatDate(dateTime.date)} at {formatTime(dateTime.time)}
-                                    </span>
+                                  <div key={idx} className="bg-amber-50 p-4 border border-amber-200 space-y-2">
+                                    <div className="flex items-center text-burgundy-900">
+                                      <Clock className="w-4 h-4 mr-2 text-amber-600" />
+                                      <span className="font-serif font-medium">
+                                        {formatDate(dateTime.date)}
+                                      </span>
+                                    </div>
+                                    <div className="text-muted-foreground font-serif ml-6">
+                                      {formatTime(dateTime.startTime)} - {formatTime(dateTime.endTime)}
+                                    </div>
+                                    <p className="text-sm text-muted-foreground font-serif ml-6 italic">
+                                      {dateTime.description}
+                                    </p>
+                                    <div className="ml-6 pt-2">
+                                      <button
+                                        onClick={() => handleAddToCalendar(event, dateTime)}
+                                        className="inline-flex items-center text-sm bg-burgundy-900 text-background px-4 py-2 hover:bg-burgundy-800 transition-colors"
+                                      >
+                                        <Calendar className="w-4 h-4 mr-2" />
+                                        Add to Calendar
+                                      </button>
+                                    </div>
                                   </div>
                                 ))}
                               </div>
@@ -250,16 +349,6 @@ const Events = () => {
                                 </a>
                               </div>
                             </div>
-                          </div>
-
-                          {/* Contact for Tickets */}
-                          <div className="pt-6 border-t border-amber-200">
-                            <button 
-                              onClick={() => document.querySelector('#contact')?.scrollIntoView({ behavior: 'smooth' })}
-                              className="w-full bg-burgundy-900 text-background py-4 font-medium hover:bg-burgundy-800 transition-colors duration-300 shadow-lg tracking-wide"
-                            >
-                              Contact for Tickets & Information
-                            </button>
                           </div>
                         </div>
                       </div>
