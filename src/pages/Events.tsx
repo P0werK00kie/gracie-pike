@@ -62,30 +62,7 @@ const Events = () => {
         code: "BNA",
         website: "https://www.flynashville.com"
       }
-    },
-    {
-      id: 2,
-      title: "Faith & Music Workshop",
-      description: "An inspiring workshop combining songwriting, faith, and music production. Learn about the creative process behind country gospel music and discover your own voice.",
-      image: "https://images.pexels.com/photos/1751731/pexels-photo-1751731.jpeg?auto=compress&cs=tinysrgb&w=800",
-      dates: [
-        { date: "2025-04-20", time: "10:00" },
-        { date: "2025-04-20", time: "14:00" }
-      ],
-      locationName: "Georgia Music Hall of Fame",
-      locationAddress: "200 Martin Luther King Jr Blvd, Macon, GA 31201",
-      hotelBookings: [
-        {
-          name: "Fairfield Inn & Suites Macon",
-          website: "https://www.marriott.com/hotels/travel/mcnfi-fairfield-inn-and-suites-macon",
-          phone: "(478) 757-8500"
-        }
-      ],
-      nearestAirport: {
-        name: "Middle Georgia Regional Airport",
-        code: "MCN",
-        website: "https://www.flymacon.com"
-      }
+    }
     }
   ];
 
