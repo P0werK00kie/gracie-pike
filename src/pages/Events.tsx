@@ -63,9 +63,8 @@ const Events = () => {
           website: "https://www.vrbo.com/search?destination=Monroe%2C%20Georgia%2C%20United%20States%20of%20America&regionId=8678&latLong=33.794838%2C-83.713226&flexibility=0_DAY&d1=2025-09-05&startDate=2025-09-05&d2=2025-09-07&endDate=2025-09-07&adults=2&upsellingNumNightsAdded=&theme=&userIntent=&semdtl=&upsellingDiscountTypeAdded=&categorySearch=&sort=RECOMMENDED"
         },
         {
-          name: "Omni Nashville Hotel",
-          website: "https://www.omnihotels.com/hotels/nashville",
-          phone: "(615) 782-5300"
+          name: "Hotels.com",
+          website: "https://www.hotels.com/Hotel-Search?destination=Monroe%2C%20Georgia%2C%20United%20States%20of%20America&regionId=8678&latLong=33.794838%2C-83.713226&flexibility=0_DAY&d1=2025-09-05&startDate=2025-09-05&d2=2025-09-07&endDate=2025-09-07&adults=2&rooms=1&upsellingNumNightsAdded=&theme=&userIntent=&semdtl=&upsellingDiscountTypeAdded=&categorySearch=&useRewards=false&sort=RECOMMENDED"
         }
       ],
       nearestAirport: {
