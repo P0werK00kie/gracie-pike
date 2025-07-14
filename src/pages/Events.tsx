@@ -43,13 +43,13 @@ const Events = () => {
       image: "https://images.pexels.com/photos/1763075/pexels-photo-1763075.jpeg?auto=compress&cs=tinysrgb&w=800",
       dates: [
         { 
-          date: "2025-09-05", 
+          date: "2025-09-06", 
           startTime: "19:00", 
           endTime: "21:30",
           description: "Opening night featuring live songs from Gracie's latest album"
         },
         { 
-          date: "2025-09-06", 
+          date: "2025-09-07", 
           startTime: "15:00", 
           endTime: "21:00",
           description: "Meet and greet with Gracie starts at 3:00pm, Singing starts at 7:00pm"
