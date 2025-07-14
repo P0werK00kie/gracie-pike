@@ -43,16 +43,22 @@ const Events = () => {
       image: "https://images.pexels.com/photos/1763075/pexels-photo-1763075.jpeg?auto=compress&cs=tinysrgb&w=800",
       dates: [
         { 
-          date: "2025-03-15", 
+          date: "2025-09-05", 
           startTime: "19:00", 
           endTime: "21:30",
-          description: "Opening night featuring acoustic sets and intimate storytelling through song"
+          description: "Opening night featuring live songs from Gracie's latest album"
         },
         { 
-          date: "2025-03-16", 
+          date: "2025-09-06", 
+          startTime: "15:00", 
+          endTime: "17:00",
+          description: "Meet and greet with Gracie"
+        },
+        { 
+          date: "2025-09-06", 
           startTime: "19:00", 
           endTime: "21:30",
-          description: "Full band performance with special guest appearances and audience favorites"
+          description: "Closing night, with live performance of Gracie's albums."
         }
       ],
       locationName: "Wayfarer Music Hall",
