@@ -39,18 +39,18 @@ const Hero = () => {
             {/* CTA Buttons with proper accessibility */}
             <div className="flex flex-col sm:flex-row gap-6 pt-8">
               <button 
-                onClick={() => document.querySelector('#portfolio')?.scrollIntoView({ behavior: 'smooth' })}
+                onClick={() => window.location.href = '/events'}
                 className="bg-burgundy-900 text-background px-10 py-4 font-medium hover:bg-burgundy-800 transition-all duration-300 shadow-lg hover:shadow-xl tracking-wide"
-                aria-label="View Gracie Pike's music portfolio"
+                aria-label="View Gracie Pike's upcoming events"
               >
-                View Portfolio
+                View Events
               </button>
               <button 
-                onClick={() => document.querySelector('#contact')?.scrollIntoView({ behavior: 'smooth' })}
+                onClick={() => window.open('https://shop.graciepike.com', '_blank')}
                 className="border-2 border-burgundy-700 text-burgundy-700 px-10 py-4 font-medium hover:bg-burgundy-700 hover:text-background transition-all duration-300 tracking-wide"
-                aria-label="Contact Gracie Pike for collaborations"
+                aria-label="Visit Gracie Pike's online shop"
               >
-                Collaborate
+                Shop
               </button>
             </div>
           </div>
