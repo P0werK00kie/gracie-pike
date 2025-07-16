@@ -1,65 +1,42 @@
 import { useState } from 'react';
 import { Menu, X } from 'lucide-react';
+import { useLocation } from 'react-router-dom';
+import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet';
 import BreadcrumbNavigation from '@/components/SEO/BreadcrumbNavigation';
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const location = useLocation();
 
   const navItems = [
-    { label: 'Portfolio', href: '#portfolio' },
-    { label: 'About', href: '#about' },
+    { label: 'Portfolio', href: '/portfolio' },
+    { label: 'About', href: '/about' },
     { label: 'Events', href: '/events' },
-    { label: 'Contact / Book', href: '#contact' }
+    { label: 'Contact / Book', href: '/contact' }
   ];
 
   const handleNavigation = (href: string) => {
-    if (href.startsWith('#')) {
-      // Handle anchor links (scroll to section)
-      const element = document.querySelector(href);
-      if (element) {
-        element.scrollIntoView({ behavior: 'smooth' });
-      }
-    } else {
-      // Handle page navigation
-      window.location.href = href;
-    }
+    // Handle page navigation
+    window.location.href = href;
     setIsMenuOpen(false);
   };
 
   // Generate breadcrumb items based on current scroll position
   const getBreadcrumbItems = () => {
     const items = [];
-    const currentSection = getCurrentSection();
+    const currentPath = location.pathname;
     
-    if (currentSection && currentSection !== 'home') {
-      const sectionLabel = currentSection.charAt(0).toUpperCase() + currentSection.slice(1);
+    if (currentPath !== '/') {
+      const pathSegment = currentPath.substring(1); // Remove leading slash
+      const sectionLabel = pathSegment.charAt(0).toUpperCase() + pathSegment.slice(1);
       items.push({
         label: sectionLabel,
-        href: `#${currentSection}`,
+        href: currentPath,
         current: true
       });
     }
     
     return items;
-  };
-
-  const getCurrentSection = () => {
-    const sections = ['about', 'portfolio', 'contact'];
-    const scrollPosition = window.scrollY + 100;
-    
-    for (const section of sections) {
-      const element = document.querySelector(`#${section}`);
-      if (element) {
-        const rect = element.getBoundingClientRect();
-        const elementTop = rect.top + window.scrollY;
-        const elementBottom = elementTop + rect.height;
-        
-        if (scrollPosition >= elementTop && scrollPosition < elementBottom) {
-          return section;
-        }
-      }
-    }
-    return 'home';
   };
 
   return (
@@ -96,43 +73,41 @@ const Header = () => {
           </nav>
 
           {/* Mobile Menu Button */}
-          <button
-            onClick={() => setIsMenuOpen(!isMenuOpen)}
-            className="md:hidden p-2 rounded-sm hover:bg-amber-50 transition-colors text-burgundy-800"
-            aria-label={isMenuOpen ? 'Close menu' : 'Open menu'}
-            aria-expanded={isMenuOpen}
-          >
-            {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
-          </button>
+          <Sheet open={isMenuOpen} onOpenChange={setIsMenuOpen}>
+            <SheetTrigger asChild>
+              <button
+                className="md:hidden p-2 rounded-sm hover:bg-amber-50 transition-colors text-burgundy-800"
+                aria-label="Open menu"
+              >
+                <Menu size={24} />
+              </button>
+            </SheetTrigger>
+            <SheetContent side="right" className="w-[300px] sm:w-[400px]">
+              <nav className="flex flex-col space-y-4 mt-8" role="navigation" aria-label="Mobile navigation">
+                {navItems.map((item) => (
+                  <button
+                    key={item.label}
+                    onClick={() => handleNavigation(item.href)}
+                    className="text-left text-foreground hover:text-burgundy-700 transition-colors duration-300 font-medium text-lg py-3 border-b border-amber-200"
+                    aria-label={`Navigate to ${item.label} section`}
+                  >
+                    {item.label}
+                  </button>
+                ))}
+                
+                {/* Mobile Breadcrumb */}
+                <div className="mt-6 pt-6 border-t border-amber-200">
+                  <BreadcrumbNavigation items={getBreadcrumbItems()} />
+                </div>
+              </nav>
+            </SheetContent>
+          </Sheet>
         </div>
 
         {/* Breadcrumb Navigation */}
         <div className="mt-4 hidden md:block">
           <BreadcrumbNavigation items={getBreadcrumbItems()} />
         </div>
-
-        {/* Mobile Menu */}
-        {isMenuOpen && (
-          <nav className="md:hidden mt-6 pb-6 border-t border-amber-200 pt-6" role="navigation" aria-label="Mobile navigation">
-            <div className="flex flex-col space-y-4">
-              {navItems.map((item) => (
-                <button
-                  key={item.label}
-                  onClick={() => handleNavigation(item.href)}
-                  className="text-foreground hover:text-burgundy-700 transition-colors duration-300 font-medium text-lg text-left py-2"
-                  aria-label={`Navigate to ${item.label} section`}
-                >
-                  {item.label}
-                </button>
-              ))}
-            </div>
-            
-            {/* Mobile Breadcrumb */}
-            <div className="mt-4 pt-4 border-t border-amber-200">
-              <BreadcrumbNavigation items={getBreadcrumbItems()} />
-            </div>
-          </nav>
-        )}
       </div>
     </header>
   );
