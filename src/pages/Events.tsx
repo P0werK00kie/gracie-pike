@@ -169,9 +169,9 @@ END:VCALENDAR`;
   return (
     <>
       <MetaTags
-        title="Events | Gracie Pike - Upcoming Concerts & Workshops"
-        description="Join Gracie Pike at upcoming country gospel concerts, faith-based music workshops, and special events. Find dates, locations, and booking information for all performances."
-        keywords="Gracie Pike events, southern gospel concerts, music workshops, Georgia concerts, faith-based music events, live performances"
+        title="Upcoming Events | Gracie Pike - Country Gospel Concerts & Shows"
+        description="Join Gracie Pike at upcoming country gospel concerts, church performances, and special events across Georgia. Find dates, locations, and ticket information for all live shows and faith-based music events."
+        keywords="Gracie Pike concerts, Georgia gospel events, country gospel shows, church performances, faith-based concerts, Southern gospel events, Christian country music shows, Georgia music events"
         url="https://graciepike.com/events"
       />
       
@@ -179,7 +179,7 @@ END:VCALENDAR`;
         <Header />
         <main>
           {/* Hero Section */}
-          <section className="pt-32 pb-20 bg-gradient-to-br from-background to-amber-50/30 relative overflow-hidden">
+          <section className="pt-40 pb-20 bg-gradient-to-br from-background to-amber-50/30 relative overflow-hidden">
             {/* Background decorations */}
             <div className="absolute top-20 right-10 w-64 h-64 border border-burgundy-200 opacity-10 rotate-12" aria-hidden="true"></div>
             <div className="absolute bottom-20 left-10 w-48 h-48 bg-amber-400 opacity-5 -rotate-12" aria-hidden="true"></div>
