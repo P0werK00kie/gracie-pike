@@ -7,8 +7,8 @@ const StructuredData = () => {
       "@context": "https://schema.org",
       "@type": "Person",
       "name": "Gracie Pike",
-      "jobTitle": "Singer-Songwriter & Music Producer",
-      "description": "Georgia-based singer-songwriter specializing in country gospel music and music production",
+      "jobTitle": "Country Gospel Singer-Songwriter",
+      "description": "Georgia-based country gospel singer-songwriter creating faith-driven music that blends Southern roots with contemporary sound",
       "url": "https://graciepike.com",
       "image": "https://wbuiebxqdjuxhvdtiata.supabase.co/storage/v1/object/sign/gracie-pike/About/787b5600-e206-4cc3-903d-bfed3888788b.JPG",
       "sameAs": [
@@ -26,14 +26,15 @@ const StructuredData = () => {
       },
       "knowsAbout": [
         "Country Gospel Music",
-        "Music Production",
         "Songwriting",
+        "Christian Country Music",
+        "Southern Gospel",
         "Faith-based Music",
-        "Southern Gospel"
+        "Live Performance"
       ],
       "hasOccupation": {
         "@type": "Occupation",
-        "name": "Singer-Songwriter",
+        "name": "Country Gospel Singer-Songwriter",
         "occupationLocation": {
           "@type": "State",
           "name": "Georgia"
@@ -46,7 +47,7 @@ const StructuredData = () => {
       "@context": "https://schema.org",
       "@type": "MusicGroup",
       "name": "Gracie Pike",
-      "genre": ["Country Gospel", "Southern Gospel", "Contemporary Christian"],
+      "genre": ["Country Gospel", "Southern Gospel", "Christian Country", "Faith-based Music"],
       "foundingLocation": {
         "@type": "State",
         "name": "Georgia"
@@ -65,9 +66,9 @@ const StructuredData = () => {
     const websiteSchema = {
       "@context": "https://schema.org",
       "@type": "WebSite",
-      "name": "Gracie Pike Music",
+      "name": "Gracie Pike | Georgia Country Gospel Singer-Songwriter",
       "url": "https://graciepike.com",
-      "description": "Official website of Gracie Pike - Georgia-based singer-songwriter specializing in country gospel music and music production",
+      "description": "Official website of Gracie Pike - Georgia-based country gospel singer-songwriter creating faith-driven music that blends Southern roots with contemporary sound",
       "author": {
         "@type": "Person",
         "name": "Gracie Pike"
@@ -83,8 +84,8 @@ const StructuredData = () => {
     const organizationSchema = {
       "@context": "https://schema.org",
       "@type": "Organization",
-      "name": "Gracie Music Production",
-      "description": "Professional music production services specializing in country gospel and faith-based music",
+      "name": "Gracie Pike Music",
+      "description": "Georgia-based country gospel music featuring original faith-driven songs that blend Southern roots with contemporary sound",
       "founder": {
         "@type": "Person",
         "name": "Gracie Pike"

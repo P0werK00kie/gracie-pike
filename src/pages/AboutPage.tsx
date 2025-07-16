@@ -10,9 +10,9 @@ const AboutPage = () => {
     <>
       {/* SEO Components */}
       <MetaTags
-        title="About Gracie Pike | Georgia Singer-Songwriter & Music Producer"
-        description="Learn about Gracie Pike's journey as a Georgia-based singer-songwriter specializing in country gospel music. Discover her faith-driven approach to music and Southern roots."
-        keywords="Gracie Pike biography, Georgia singer-songwriter, country gospel artist, faith-based music, Southern gospel musician, music producer Georgia"
+        title="About Gracie Pike | Georgia Country Gospel Singer-Songwriter Story"
+        description="Discover Gracie Pike's musical journey from a Georgia preacher's daughter to country gospel singer-songwriter. Learn about her faith-driven approach to music, Southern roots, and family influences that shape her sound."
+        keywords="Gracie Pike biography, Georgia country gospel singer, faith-based musician story, Southern gospel artist, Christian country music, preacher's daughter musician, Georgia gospel music"
         url="https://graciepike.com/about"
       />
       <StructuredData />

@@ -185,9 +185,9 @@ const ContactPage = () => {
     <>
       {/* SEO Components */}
       <MetaTags
-        title="Contact & Book | Gracie Pike - Get in Touch"
-        description="Contact Gracie Pike for music collaborations, show bookings, and inquiries. Book Gracie for your event or reach out for music production services in Georgia."
-        keywords="contact Gracie Pike, book Gracie Pike, music collaboration Georgia, show booking, country gospel booking, music production inquiry"
+        title="Contact & Book Shows | Gracie Pike - Country Gospel Bookings"
+        description="Contact Gracie Pike for country gospel show bookings, music collaborations, and inquiries. Book Gracie for your church, event, or venue. Get in touch for live performances and music services in Georgia."
+        keywords="book Gracie Pike shows, country gospel booking, Georgia gospel concerts, church music booking, faith-based event booking, Christian country music shows, Southern gospel performances"
         url="https://graciepike.com/contact"
       />
       <StructuredData />

@@ -92,9 +92,9 @@ const PortfolioPage = () => {
     <>
       {/* SEO Components */}
       <MetaTags
-        title="Portfolio | Gracie Pike - Music & Creative Work"
-        description="Explore Gracie Pike's portfolio featuring country gospel music, original songs, music production services, and creative work. Listen to her latest releases and discover her artistic journey."
-        keywords="Gracie Pike portfolio, country gospel music, original songs, music production, Georgia musician portfolio, faith-based music collection"
+        title="Music Portfolio | Gracie Pike - Country Gospel Songs & Performances"
+        description="Explore Gracie Pike's country gospel music portfolio featuring original faith-driven songs, live performances, and social media presence. Listen to her latest releases and connect with her music journey."
+        keywords="Gracie Pike music portfolio, country gospel songs, faith-based music collection, Georgia gospel music, Christian country songs, original gospel music, Southern gospel performances"
         url="https://graciepike.com/portfolio"
       />
       <StructuredData />

@@ -10,9 +10,9 @@ interface MetaTagsProps {
 }
 
 const MetaTags: React.FC<MetaTagsProps> = ({
-  title = "Gracie Pike | Singer-Songwriter & Music Production Portfolio",
-  description = "Gracie Pike is a talented singer-songwriter from Georgia specializing in country gospel music, music production, and creative photography. Explore her portfolio featuring original songs, music production services, and artistic work that blends faith, Southern roots, and contemporary creativity.",
-  keywords = "Gracie Pike, singer-songwriter, country gospel music, music production, Georgia musician, faith-based music, Southern gospel, original songs, music portfolio, creative photography",
+  title = "Gracie Pike | Georgia Country Gospel Singer-Songwriter",
+  description = "Gracie Pike is a Georgia-based country gospel singer-songwriter creating faith-driven music that blends Southern roots with contemporary sound. Listen to her original songs, book shows, and discover her musical journey rooted in faith and family.",
+  keywords = "Gracie Pike, Georgia singer-songwriter, country gospel music, faith-based music, Southern gospel, Christian country music, Georgia musician, gospel singer, country music Georgia, faith-driven songs",
   image = "https://wbuiebxqdjuxhvdtiata.supabase.co/storage/v1/object/sign/gracie-pike/Logo/Screenshot%202025-06-23%20at%204.16.17%20PM.png",
   url = "https://graciepike.com",
   type = "website"

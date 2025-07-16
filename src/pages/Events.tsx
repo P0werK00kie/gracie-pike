@@ -169,9 +169,9 @@ END:VCALENDAR`;
   return (
     <>
       <MetaTags
-        title="Events | Gracie Pike - Upcoming Concerts & Workshops"
-        description="Join Gracie Pike at upcoming country gospel concerts, faith-based music workshops, and special events. Find dates, locations, and booking information for all performances."
-        keywords="Gracie Pike events, southern gospel concerts, music workshops, Georgia concerts, faith-based music events, live performances"
+        title="Upcoming Events | Gracie Pike - Country Gospel Concerts & Shows"
+        description="Join Gracie Pike at upcoming country gospel concerts, church performances, and special events across Georgia. Find dates, locations, and ticket information for all live shows and faith-based music events."
+        keywords="Gracie Pike concerts, Georgia gospel events, country gospel shows, church performances, faith-based concerts, Southern gospel events, Christian country music shows, Georgia music events"
         url="https://graciepike.com/events"
       />
       
