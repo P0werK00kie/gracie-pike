@@ -262,39 +262,42 @@ END:VCALENDAR`;
                       className="group bg-card luxury-shadow hover:shadow-2xl transition-all duration-500 border border-amber-200 animate-elegant-entrance"
                       style={{ animationDelay: `${index * 200}ms` }}
                     >
-                      <div className="grid md:grid-cols-2 gap-0">
-                        {/* Event Image */}
-                        <div className="relative overflow-hidden aspect-[4/3] md:aspect-auto">
-                          <OptimizedImage 
-                            src={event.image}
-                            alt={`${event.title} - ${event.description}`}
-                            title={event.title}
-                            className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
-                            width={600}
-                            height={450}
-                            loading="lazy"
-                          />
-                          <div className="absolute inset-0 bg-gradient-to-t from-burgundy-900/60 to-transparent"></div>
-                        </div>
+                      {/* Event Image - Full Width at Top */}
+                      <div className="relative overflow-hidden aspect-[16/9]">
+                        <OptimizedImage 
+                          src={event.image}
+                          alt={`${event.title} - ${event.description}`}
+                          title={event.title}
+                          className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+                          width={800}
+                          height={450}
+                          loading="lazy"
+                        />
+                        <div className="absolute inset-0 bg-gradient-to-t from-burgundy-900/60 to-transparent"></div>
+                      </div>
 
-                        {/* Event Details */}
-                        <div className="p-8 flex flex-col justify-between">
-                          <div>
-                            <h2 className="text-3xl font-display font-bold text-burgundy-900 mb-4 group-hover:text-amber-600 transition-colors">
-                              {event.title}
-                            </h2>
-                            
-                            <p className="text-muted-foreground leading-relaxed mb-6 font-serif">
-                              {event.description}
-                            </p>
+                      {/* Event Title & Description - Centered */}
+                      <div className="p-8 text-center border-b border-amber-200">
+                        <h2 className="text-4xl font-display font-bold text-burgundy-900 mb-4 group-hover:text-amber-600 transition-colors">
+                          {event.title}
+                        </h2>
+                        <p className="text-lg text-muted-foreground leading-relaxed font-serif max-w-3xl mx-auto">
+                          {event.description}
+                        </p>
+                      </div>
 
+                      {/* Event Details - 2 Column Grid */}
+                      <div className="p-8">
+                        <div className="grid md:grid-cols-2 gap-8">
+                          {/* Left Column */}
+                          <div className="space-y-8">
                             {/* Dates & Times */}
-                            <div className="mb-6">
-                              <h3 className="flex items-center text-lg font-display font-semibold text-burgundy-900 mb-3">
+                            <div>
+                              <h3 className="flex items-center text-lg font-display font-semibold text-burgundy-900 mb-4">
                                 <Calendar className="w-5 h-5 mr-2 text-amber-600" />
                                 Dates & Times
                               </h3>
-                              <div className="space-y-2">
+                              <div className="space-y-3">
                                 {event.dates.map((dateTime, idx) => (
                                   <div key={idx} className="bg-amber-50 p-4 border border-amber-200 space-y-2">
                                     <div className="flex items-center text-burgundy-900">
@@ -324,20 +327,45 @@ END:VCALENDAR`;
                             </div>
 
                             {/* Location */}
-                            <div className="mb-6">
-                              <h3 className="flex items-center text-lg font-display font-semibold text-burgundy-900 mb-3">
+                            <div>
+                              <h3 className="flex items-center text-lg font-display font-semibold text-burgundy-900 mb-4">
                                 <MapPin className="w-5 h-5 mr-2 text-amber-600" />
                                 Location
                               </h3>
-                              <div className="text-muted-foreground font-serif">
-                                <p className="font-medium">{event.locationName}</p>
-                                <p>{event.locationAddress}</p>
+                              <div className="bg-amber-50 p-4 border border-amber-200">
+                                <p className="font-medium text-burgundy-900 font-serif">{event.locationName}</p>
+                                <p className="text-muted-foreground font-serif">{event.locationAddress}</p>
                               </div>
                             </div>
 
+                            {/* Airport Information */}
+                            <div>
+                              <h3 className="flex items-center text-lg font-display font-semibold text-burgundy-900 mb-4">
+                                <Plane className="w-5 h-5 mr-2 text-amber-600" />
+                                Nearest Airport
+                              </h3>
+                              <div className="bg-amber-50 p-4 border border-amber-200">
+                                <h4 className="font-medium text-burgundy-900 mb-2">
+                                  {event.nearestAirport.name} ({event.nearestAirport.code})
+                                </h4>
+                                <a
+                                  href={event.nearestAirport.website}
+                                  target="_blank"
+                                  rel="noopener noreferrer"
+                                  className="inline-flex items-center text-sm bg-burgundy-900 text-background px-4 py-2 hover:bg-burgundy-800 transition-colors"
+                                >
+                                  <Plane className="w-4 h-4 mr-2" />
+                                  Visit Airport Website
+                                </a>
+                              </div>
+                            </div>
+                          </div>
+
+                          {/* Right Column */}
+                          <div className="space-y-8">
                             {/* Hotel Bookings */}
-                            <div className="mb-6">
-                              <h3 className="flex items-center text-lg font-display font-semibold text-burgundy-900 mb-3">
+                            <div>
+                              <h3 className="flex items-center text-lg font-display font-semibold text-burgundy-900 mb-4">
                                 <Hotel className="w-5 h-5 mr-2 text-amber-600" />
                                 Recommended Hotels
                               </h3>
@@ -368,71 +396,49 @@ END:VCALENDAR`;
                               </div>
                             </div>
 
-                            {/* Airport Information */}
-                            <div className="mb-6">
-                              <h3 className="flex items-center text-lg font-display font-semibold text-burgundy-900 mb-3">
-                                <Plane className="w-5 h-5 mr-2 text-amber-600" />
-                                Nearest Airport
+                            {/* Transportation Options */}
+                            <div>
+                              <h3 className="flex items-center text-lg font-display font-semibold text-burgundy-900 mb-4">
+                                <svg className="w-5 h-5 mr-2 text-amber-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7h12m0 0l-4-4m4 4l-4 4m0 6H4m0 0l4 4m-4-4l4-4" />
+                                </svg>
+                                Transportation Options
                               </h3>
-                              <div className="bg-amber-50 p-4 border border-amber-200">
-                                <h4 className="font-medium text-burgundy-900 mb-2">
-                                  {event.nearestAirport.name} ({event.nearestAirport.code})
-                                </h4>
-                                <a
-                                  href={event.nearestAirport.website}
-                                  target="_blank"
-                                  rel="noopener noreferrer"
-                                  className="inline-flex items-center text-sm bg-burgundy-900 text-background px-4 py-2 hover:bg-burgundy-800 transition-colors"
-                                >
-                                  <Plane className="w-4 h-4 mr-2" />
-                                  Visit Airport Website
-                                </a>
+                              <div className="space-y-3">
+                                {event.transportationOptions.map((transport, idx) => (
+                                  <div key={idx} className="bg-amber-50 p-4 border border-amber-200">
+                                    <div className="flex items-center justify-between mb-2">
+                                      <h4 className="font-medium text-burgundy-900">
+                                        {transport.name} ({transport.type})
+                                      </h4>
+                                    </div>
+                                    <p className="text-sm text-muted-foreground mb-3 font-serif">
+                                      {transport.description}
+                                    </p>
+                                    <div className="flex flex-col sm:flex-row gap-2">
+                                      {transport.website && (
+                                        <a
+                                          href={transport.website}
+                                          target="_blank"
+                                          rel="noopener noreferrer"
+                                          className="inline-flex items-center text-sm bg-burgundy-900 text-background px-4 py-2 hover:bg-burgundy-800 transition-colors"
+                                        >
+                                          Visit Website
+                                        </a>
+                                      )}
+                                      {transport.phone && (
+                                        <a
+                                          href={`tel:${transport.phone}`}
+                                          className="inline-flex items-center text-sm border border-burgundy-700 text-burgundy-700 px-4 py-2 hover:bg-burgundy-700 hover:text-background transition-colors"
+                                        >
+                                          {transport.phone}
+                                        </a>
+                                      )}
+                                    </div>
+                                  </div>
+                                ))}
                               </div>
                             </div>
-                          </div>
-                        </div>
-
-                        {/* Transportation Options */}
-                        <div className="mb-6">
-                          <h3 className="flex items-center text-lg font-display font-semibold text-burgundy-900 mb-3">
-                            <svg className="w-5 h-5 mr-2 text-amber-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7h12m0 0l-4-4m4 4l-4 4m0 6H4m0 0l4 4m-4-4l4-4" />
-                            </svg>
-                            Transportation Options
-                          </h3>
-                          <div className="space-y-3">
-                            {event.transportationOptions.map((transport, idx) => (
-                              <div key={idx} className="bg-amber-50 p-4 border border-amber-200">
-                                <div className="flex items-center justify-between mb-2">
-                                  <h4 className="font-medium text-burgundy-900">
-                                    {transport.name} ({transport.type})
-                                  </h4>
-                                </div>
-                                <p className="text-sm text-muted-foreground mb-3 font-serif">
-                                  {transport.description}
-                                </p>
-                                <div className="flex flex-col sm:flex-row gap-2">
-                                  {transport.website && (
-                                    <a
-                                      href={transport.website}
-                                      target="_blank"
-                                      rel="noopener noreferrer"
-                                      className="inline-flex items-center text-sm bg-burgundy-900 text-background px-4 py-2 hover:bg-burgundy-800 transition-colors"
-                                    >
-                                      Visit Website
-                                    </a>
-                                  )}
-                                  {transport.phone && (
-                                    <a
-                                      href={`tel:${transport.phone}`}
-                                      className="inline-flex items-center text-sm border border-burgundy-700 text-burgundy-700 px-4 py-2 hover:bg-burgundy-700 hover:text-background transition-colors"
-                                    >
-                                      {transport.phone}
-                                    </a>
-                                  )}
-                                </div>
-                              </div>
-                            ))}
                           </div>
                         </div>
                       </div>
