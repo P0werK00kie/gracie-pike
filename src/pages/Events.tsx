@@ -84,9 +84,9 @@ const Events = () => {
       transportationOptions: [
         {
           type: "Rideshare",
-          name: "Uber",
-          website: "https://www.uber.com",
-          description: "Convenient rideshare service available throughout the Monroe area"
+          name: "Southern Classic Transport",
+          website: "https://www.southernclassictransport.com/",
+          description: "Atlanta limo service with vehicles of every size for your needs."
         }
       ]
     }
