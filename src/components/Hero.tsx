@@ -94,19 +94,6 @@ const Hero = () => {
             <div className="absolute top-8 -left-8 w-20 h-20 border border-amber-400 rotate-45 opacity-40" aria-hidden="true"></div>
           </div>
         </div>
-        
-        {/* Scroll Indicator */}
-        <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 text-center">
-          <button 
-            onClick={scrollToAbout}
-            className="text-burgundy-700 hover:text-burgundy-900 transition-colors duration-300 flex flex-col items-center space-y-2"
-            aria-label="Scroll down to learn more about Gracie Pike"
-          >
-            <span className="text-sm tracking-wider font-medium">Discover More</span>
-            <ArrowDown size={24} className="animate-bounce" aria-hidden="true" />
-          </button>
-        </div>
-      </div>
       
       {/* Classical wave divider */}
       <div className="absolute bottom-0 left-0 right-0" aria-hidden="true">
