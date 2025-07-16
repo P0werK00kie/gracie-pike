@@ -96,18 +96,12 @@ const Header = () => {
                 ))}
                 
                 {/* Mobile Breadcrumb */}
-                <div className="mt-6 pt-6 border-t border-amber-200">
-                  <BreadcrumbNavigation items={getBreadcrumbItems()} />
-                </div>
               </nav>
             </SheetContent>
           </Sheet>
         </div>
 
         {/* Breadcrumb Navigation */}
-        <div className="mt-4 hidden md:block">
-          <BreadcrumbNavigation items={getBreadcrumbItems()} />
-        </div>
       </div>
     </header>
   );
