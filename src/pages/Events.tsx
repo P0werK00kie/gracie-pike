@@ -87,31 +87,6 @@ const Events = () => {
           name: "Uber",
           website: "https://www.uber.com",
           description: "Convenient rideshare service available throughout the Monroe area"
-        },
-        {
-          type: "Rideshare",
-          name: "Lyft",
-          website: "https://www.lyft.com",
-          description: "Alternative rideshare option with competitive rates"
-        },
-        {
-          type: "Taxi",
-          name: "Monroe Taxi Service",
-          phone: "(770) 267-8294",
-          description: "Local taxi service serving Monroe and surrounding areas"
-        },
-        {
-          type: "Car Rental",
-          name: "Enterprise Rent-A-Car",
-          website: "https://www.enterprise.com/en/car-rental/locations/us/ga/monroe-4w6r.html",
-          phone: "(770) 267-1234",
-          description: "Car rental location in Monroe for flexible transportation"
-        },
-        {
-          type: "Public Transit",
-          name: "Gwinnett County Transit",
-          website: "https://www.gwinnettcounty.com/web/gwinnett/departments/transportation/gwinnettcountytransit",
-          description: "Limited public transportation options connecting to nearby areas"
         }
       ]
     }
