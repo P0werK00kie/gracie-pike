@@ -108,6 +108,14 @@ const Hero = () => {
         </div>
       </div>
       
+      {/* Classical wave divider */}
+      <div className="absolute bottom-0 left-0 right-0" aria-hidden="true">
+        <svg viewBox="0 0 1440 120" className="w-full h-20 fill-background">
+          <path d="M0,60 C240,100 480,20 720,60 C960,100 1200,20 1440,60 L1440,120 L0,120 Z"></path>
+        </svg>
+      </div>
     </section>
-  )
-}
+  );
+};
+
+export default Hero;
