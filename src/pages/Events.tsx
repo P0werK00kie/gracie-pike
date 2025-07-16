@@ -17,6 +17,14 @@ interface HotelBooking {
   phone?: string;
 }
 
+interface TransportationOption {
+  type: string;
+  name: string;
+  website?: string;
+  phone?: string;
+  description: string;
+}
+
 interface Event {
   id: number;
   title: string;
@@ -26,6 +34,7 @@ interface Event {
   locationName: string;
   locationAddress: string;
   hotelBookings: HotelBooking[];
+  transportationOptions: TransportationOption[];
   nearestAirport: {
     name: string;
     code: string;
@@ -71,7 +80,40 @@ const Events = () => {
         name: "Hartsfield Jackson International Airport",
         code: "ATL",
         website: "https://www.atl.com/"
-      }
+      },
+      transportationOptions: [
+        {
+          type: "Rideshare",
+          name: "Uber",
+          website: "https://www.uber.com",
+          description: "Convenient rideshare service available throughout the Monroe area"
+        },
+        {
+          type: "Rideshare",
+          name: "Lyft",
+          website: "https://www.lyft.com",
+          description: "Alternative rideshare option with competitive rates"
+        },
+        {
+          type: "Taxi",
+          name: "Monroe Taxi Service",
+          phone: "(770) 267-8294",
+          description: "Local taxi service serving Monroe and surrounding areas"
+        },
+        {
+          type: "Car Rental",
+          name: "Enterprise Rent-A-Car",
+          website: "https://www.enterprise.com/en/car-rental/locations/us/ga/monroe-4w6r.html",
+          phone: "(770) 267-1234",
+          description: "Car rental location in Monroe for flexible transportation"
+        },
+        {
+          type: "Public Transit",
+          name: "Gwinnett County Transit",
+          website: "https://www.gwinnettcounty.com/web/gwinnett/departments/transportation/gwinnettcountytransit",
+          description: "Limited public transportation options connecting to nearby areas"
+        }
+      ]
     }
   ];
 
@@ -347,6 +389,50 @@ END:VCALENDAR`;
                                 </a>
                               </div>
                             </div>
+                          </div>
+                        </div>
+
+                        {/* Transportation Options */}
+                        <div className="mb-6">
+                          <h3 className="flex items-center text-lg font-display font-semibold text-burgundy-900 mb-3">
+                            <svg className="w-5 h-5 mr-2 text-amber-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7h12m0 0l-4-4m4 4l-4 4m0 6H4m0 0l4 4m-4-4l4-4" />
+                            </svg>
+                            Transportation Options
+                          </h3>
+                          <div className="space-y-3">
+                            {event.transportationOptions.map((transport, idx) => (
+                              <div key={idx} className="bg-amber-50 p-4 border border-amber-200">
+                                <div className="flex items-center justify-between mb-2">
+                                  <h4 className="font-medium text-burgundy-900">
+                                    {transport.name} ({transport.type})
+                                  </h4>
+                                </div>
+                                <p className="text-sm text-muted-foreground mb-3 font-serif">
+                                  {transport.description}
+                                </p>
+                                <div className="flex flex-col sm:flex-row gap-2">
+                                  {transport.website && (
+                                    <a
+                                      href={transport.website}
+                                      target="_blank"
+                                      rel="noopener noreferrer"
+                                      className="inline-flex items-center text-sm bg-burgundy-900 text-background px-4 py-2 hover:bg-burgundy-800 transition-colors"
+                                    >
+                                      Visit Website
+                                    </a>
+                                  )}
+                                  {transport.phone && (
+                                    <a
+                                      href={`tel:${transport.phone}`}
+                                      className="inline-flex items-center text-sm border border-burgundy-700 text-burgundy-700 px-4 py-2 hover:bg-burgundy-700 hover:text-background transition-colors"
+                                    >
+                                      {transport.phone}
+                                    </a>
+                                  )}
+                                </div>
+                              </div>
+                            ))}
                           </div>
                         </div>
                       </div>
