@@ -104,7 +104,7 @@ const PortfolioPage = () => {
       <div className="min-h-screen">
         <Header />
         <main>
-          <section className="pt-32 pb-20 bg-gradient-to-br from-background to-amber-50/30 relative overflow-hidden" role="main">
+          <section className="py-20 bg-gradient-to-br from-background to-amber-50/30 relative overflow-hidden" role="main">
             {/* Background decorations */}
             <div className="absolute top-20 right-10 w-48 h-48 border border-burgundy-200 opacity-10 rotate-12" aria-hidden="true"></div>
             <div className="absolute bottom-20 left-10 w-32 h-32 bg-amber-400 opacity-5 rotate-45" aria-hidden="true"></div>

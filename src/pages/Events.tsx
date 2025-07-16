@@ -179,7 +179,7 @@ END:VCALENDAR`;
         <Header />
         <main>
           {/* Hero Section */}
-          <section className="pt-40 pb-20 bg-gradient-to-br from-background to-amber-50/30 relative overflow-hidden">
+          <section className="pt-32 pb-20 bg-gradient-to-br from-background to-amber-50/30 relative overflow-hidden">
             {/* Background decorations */}
             <div className="absolute top-20 right-10 w-64 h-64 border border-burgundy-200 opacity-10 rotate-12" aria-hidden="true"></div>
             <div className="absolute bottom-20 left-10 w-48 h-48 bg-amber-400 opacity-5 -rotate-12" aria-hidden="true"></div>

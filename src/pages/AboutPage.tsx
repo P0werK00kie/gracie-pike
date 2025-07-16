@@ -22,7 +22,7 @@ const AboutPage = () => {
       <div className="min-h-screen">
         <Header />
         <main>
-          <section className="pt-32 pb-16 bg-background relative overflow-hidden" role="main">
+          <section className="py-16 bg-background relative overflow-hidden" role="main">
             {/* Background decorative elements */}
             <div className="absolute top-0 right-0 w-64 h-64 border border-amber-200 opacity-10 rotate-12" aria-hidden="true"></div>
             <div className="absolute bottom-0 left-0 w-48 h-48 bg-burgundy-900 opacity-5 rotate-45" aria-hidden="true"></div>
