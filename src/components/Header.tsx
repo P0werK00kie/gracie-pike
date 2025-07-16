@@ -11,7 +11,7 @@ const Header = () => {
   const navItems = [
     { label: 'Home', href: '/' },
     { label: 'Portfolio', href: '/portfolio' },
-    { label: 'Shop', href: 'https://www.shop.graciepike.com' },
+    { label: 'Shop', href: 'https://shop.graciepike.com' },
     { label: 'About', href: '/about' },
     { label: 'Events', href: '/events' },
     { label: 'Contact / Book', href: '/contact' }
