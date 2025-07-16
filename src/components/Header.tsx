@@ -9,7 +9,7 @@ const Header = () => {
   const location = useLocation();
 
   const navItems = [
-    { label: 'Home', href: '/home' },
+    { label: 'Home', href: '/' },
     { label: 'Portfolio', href: '/portfolio' },
     { label: 'About', href: '/about' },
     { label: 'Events', href: '/events' },
