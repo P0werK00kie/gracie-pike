@@ -197,7 +197,7 @@ const ContactPage = () => {
       <div className="min-h-screen">
         <Header />
         <main>
-          <section className="py-20 bg-gradient-to-br from-burgundy-50/30 to-amber-50/20 relative overflow-hidden">
+          <section className="pt-28 pb-20 bg-gradient-to-br from-burgundy-50/30 to-amber-50/20 relative overflow-hidden">
             {/* Background decorations */}
             <div className="absolute top-10 right-10 w-64 h-64 border border-burgundy-200 opacity-10 rotate-45"></div>
             <div className="absolute bottom-10 left-10 w-48 h-48 bg-amber-400 opacity-5 -rotate-12"></div>
