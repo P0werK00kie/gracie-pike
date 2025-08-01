@@ -4,7 +4,7 @@ import Footer from '@/components/Footer';
 import MetaTags from '@/components/SEO/MetaTags';
 import OptimizedImage from '@/components/SEO/ImageOptimization';
 import { useState } from 'react';
-import { Dialog, DialogContent, DialogTrigger } from '@/components/ui/dialog';
+import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogDescription, DialogTrigger } from '@/components/ui/dialog';
 
 interface EventDate {
   date: string;
@@ -287,6 +287,12 @@ END:VCALENDAR`;
                               </button>
                             </DialogTrigger>
                             <DialogContent className="max-w-2xl w-full h-[600px] p-0">
+                              <DialogHeader className="sr-only">
+                                <DialogTitle>RSVP for {event.title}</DialogTitle>
+                                <DialogDescription>
+                                  Please fill out the form below to RSVP for this event.
+                                </DialogDescription>
+                              </DialogHeader>
                               <div className="w-full h-full">
                                 <iframe
                                   src="https://api.leadconnectorhq.com/widget/form/uK18bBc5fr9bblV4hVVt"
