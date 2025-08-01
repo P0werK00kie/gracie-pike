@@ -3,6 +3,9 @@ import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import MetaTags from '@/components/SEO/MetaTags';
 import OptimizedImage from '@/components/SEO/ImageOptimization';
+import { useState } from 'react';
+import { supabase } from '@/lib/supabase';
+import { toast } from '@/components/ui/sonner';
 
 interface EventDate {
   date: string;
@@ -113,6 +116,43 @@ const Events = () => {
     });
   };
 
+  const handleRSVP = async (event: Event, dateTime: EventDate) => {
+    const name = prompt('Please enter your name:');
+    if (!name) return;
+    
+    const email = prompt('Please enter your email:');
+    if (!email) return;
+    
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailRegex.test(email)) {
+      toast.error('Please enter a valid email address');
+      return;
+    }
+    
+    try {
+      const { error } = await supabase
+        .from('event_rsvps')
+        .insert([{
+          event_title: event.title,
+          event_date: dateTime.date,
+          event_time: dateTime.startTime,
+          attendee_name: name.trim(),
+          attendee_email: email.trim(),
+          location: event.locationName
+        }]);
+
+      if (error) {
+        console.error('RSVP error:', error);
+        toast.error('Failed to submit RSVP. Please try again.');
+        return;
+      }
+
+      toast.success('Thank you! Your RSVP has been submitted successfully.');
+    } catch (error) {
+      console.error('Unexpected error:', error);
+      toast.error('An unexpected error occurred. Please try again.');
+    }
+  };
   const generateCalendarEvent = (event: Event, dateTime: EventDate) => {
     const eventDate = new Date(dateTime.date);
     const [startHours, startMinutes] = dateTime.startTime.split(':');
@@ -303,6 +343,12 @@ END:VCALENDAR`;
                                   >
                                     <Calendar className="w-4 h-4 mr-2" />
                                     Add to Calendar
+                                  </button>
+                                  <button
+                                    onClick={() => handleRSVP(event, dateTime)}
+                                    className="inline-flex items-center text-sm bg-amber-600 text-background px-4 py-2 hover:bg-amber-700 transition-colors ml-2"
+                                  >
+                                    RSVP
                                   </button>
                                 </div>
                               </div>
