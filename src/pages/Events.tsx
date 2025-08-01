@@ -4,8 +4,7 @@ import Footer from '@/components/Footer';
 import MetaTags from '@/components/SEO/MetaTags';
 import OptimizedImage from '@/components/SEO/ImageOptimization';
 import { useState } from 'react';
-import { supabase } from '@/lib/supabase';
-import { toast } from '@/components/ui/sonner';
+import { Dialog, DialogContent, DialogTrigger } from '@/components/ui/dialog';
 
 interface EventDate {
   date: string;
@@ -47,51 +46,7 @@ interface Event {
 
 const Events = () => {
   // Sample events data - this would typically come from a database or API
-  const [isRsvpSubmitting, setIsRsvpSubmitting] = useState(false);
-
-  const handleRsvp = async (event: Event, dateTime: EventDate) => {
-    const attendeeName = prompt('Please enter your name:');
-    if (!attendeeName) return;
-    
-    const attendeeEmail = prompt('Please enter your email:');
-    if (!attendeeEmail) return;
-    
-    // Basic email validation
-    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    if (!emailRegex.test(attendeeEmail)) {
-      toast.error('Please enter a valid email address');
-      return;
-    }
-    
-    setIsRsvpSubmitting(true);
-    
-    try {
-      const { error } = await supabase
-        .from('event_rsvps')
-        .insert([{
-          event_title: event.title,
-          event_date: dateTime.date,
-          event_time: dateTime.startTime,
-          attendee_name: attendeeName.trim(),
-          attendee_email: attendeeEmail.trim(),
-          location: `${event.locationName}, ${event.locationAddress}`
-        }]);
-
-      if (error) {
-        console.error('RSVP error:', error);
-        toast.error('Failed to submit RSVP. Please try again.');
-        return;
-      }
-
-      toast.success('Thank you! Your RSVP has been submitted successfully.');
-      
-    } catch (error) {
-      console.error('Unexpected RSVP error:', error);
-      toast.error('An unexpected error occurred. Please try again.');
-    } finally {
-      setIsRsvpSubmitting(false);
-    }
-  };
+  const [isRsvpModalOpen, setIsRsvpModalOpen] = useState(false);
 
   const events: Event[] = [
     {
@@ -321,15 +276,38 @@ END:VCALENDAR`;
                             <p className="font-medium text-burgundy-900 font-serif">{event.locationName}</p>
                             <p className="text-muted-foreground font-serif">{event.locationAddress}</p>
                           </div>
-                          <button
-                            onClick={() => handleRsvp(event, event.dates[0])}
-                            disabled={isRsvpSubmitting}
-                            className="bg-amber-600 text-background px-6 py-3 font-medium hover:bg-amber-700 transition-colors duration-300 shadow-lg hover:shadow-xl flex items-center space-x-2 tracking-wide disabled:opacity-50 disabled:cursor-not-allowed whitespace-nowrap"
-                            aria-label={`RSVP for ${event.title} at ${event.locationName}`}
-                          >
-                            <Calendar className="w-5 h-5" />
-                            <span>{isRsvpSubmitting ? 'Submitting...' : 'RSVP for this Event'}</span>
-                          </button>
+                          <Dialog>
+                            <DialogTrigger asChild>
+                              <button
+                                className="bg-amber-600 text-background px-6 py-3 font-medium hover:bg-amber-700 transition-colors duration-300 shadow-lg hover:shadow-xl flex items-center space-x-2 tracking-wide whitespace-nowrap"
+                                aria-label={`RSVP for ${event.title} at ${event.locationName}`}
+                              >
+                                <Calendar className="w-5 h-5" />
+                                <span>RSVP for this Event</span>
+                              </button>
+                            </DialogTrigger>
+                            <DialogContent className="max-w-2xl w-full h-[600px] p-0">
+                              <div className="w-full h-full">
+                                <iframe
+                                  src="https://api.leadconnectorhq.com/widget/form/uK18bBc5fr9bblV4hVVt"
+                                  style={{width:'100%',height:'100%',border:'none',borderRadius:'3px'}}
+                                  id="inline-uK18bBc5fr9bblV4hVVt" 
+                                  data-layout="{'id':'INLINE'}"
+                                  data-trigger-type="alwaysShow"
+                                  data-trigger-value=""
+                                  data-activation-type="alwaysActivated"
+                                  data-activation-value=""
+                                  data-deactivation-type="neverDeactivate"
+                                  data-deactivation-value=""
+                                  data-form-name="Sept 2025 Concert"
+                                  data-height="449"
+                                  data-layout-iframe-id="inline-uK18bBc5fr9bblV4hVVt"
+                                  data-form-id="uK18bBc5fr9bblV4hVVt"
+                                  title="Sept 2025 Concert"
+                                />
+                              </div>
+                            </DialogContent>
+                          </Dialog>
                         </div>
                       </div>
 
@@ -476,6 +454,10 @@ END:VCALENDAR`;
             </div>
           </section>
         </main>
+        
+        {/* Load the form embed script */}
+        <script src="https://link.msgsndr.com/js/form_embed.js" async></script>
+        
         <Footer />
       </div>
     </>
