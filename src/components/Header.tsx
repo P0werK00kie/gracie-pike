@@ -66,17 +66,34 @@ const Header = () => {
 
           {/* Right - Navigation */}
           <nav className="hidden md:flex space-x-10" role="navigation" aria-label="Main navigation">
-            {navItems.map((item) => (
-              <button
-                key={item.label}
-                onClick={() => handleNavigation(item.href)}
-                className="text-foreground hover:text-burgundy-700 transition-colors duration-300 font-medium text-lg tracking-wide relative group"
-                aria-label={`Navigate to ${item.label} section`}
-              >
-                {item.label}
-                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-amber-400 transition-all duration-300 group-hover:w-full"></span>
-              </button>
-            ))}
+            {navItems.map((item) => {
+              // Special styling for the donate button
+              if (item.label === 'Donate To This Ministry') {
+                return (
+                  <button
+                    key={item.label}
+                    onClick={() => handleNavigation(item.href)}
+                    className="bg-burgundy-900 text-background px-6 py-3 font-medium hover:bg-burgundy-800 transition-colors duration-300 shadow-lg tracking-wide"
+                    aria-label={`Navigate to ${item.label} section`}
+                  >
+                    {item.label}
+                  </button>
+                );
+              }
+              
+              // Regular styling for other navigation items
+              return (
+                <button
+                  key={item.label}
+                  onClick={() => handleNavigation(item.href)}
+                  className="text-foreground hover:text-burgundy-700 transition-colors duration-300 font-medium text-lg tracking-wide relative group"
+                  aria-label={`Navigate to ${item.label} section`}
+                >
+                  {item.label}
+                  <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-amber-400 transition-all duration-300 group-hover:w-full"></span>
+                </button>
+              );
+            })}
           </nav>
 
           {/* Mobile Menu Button */}
@@ -91,16 +108,33 @@ const Header = () => {
             </SheetTrigger>
             <SheetContent side="right" className="w-[300px] sm:w-[400px]">
               <nav className="flex flex-col space-y-4 mt-8" role="navigation" aria-label="Mobile navigation">
-                {navItems.map((item) => (
-                  <button
-                    key={item.label}
-                    onClick={() => handleNavigation(item.href)}
-                    className="text-left text-foreground hover:text-burgundy-700 transition-colors duration-300 font-medium text-lg py-3 border-b border-amber-200"
-                    aria-label={`Navigate to ${item.label} section`}
-                  >
-                    {item.label}
-                  </button>
-                ))}
+                {navItems.map((item) => {
+                  // Special styling for the donate button in mobile menu
+                  if (item.label === 'Donate To This Ministry') {
+                    return (
+                      <button
+                        key={item.label}
+                        onClick={() => handleNavigation(item.href)}
+                        className="bg-burgundy-900 text-background px-6 py-3 font-medium hover:bg-burgundy-800 transition-colors duration-300 shadow-lg tracking-wide text-center"
+                        aria-label={`Navigate to ${item.label} section`}
+                      >
+                        {item.label}
+                      </button>
+                    );
+                  }
+                  
+                  // Regular styling for other navigation items in mobile
+                  return (
+                    <button
+                      key={item.label}
+                      onClick={() => handleNavigation(item.href)}
+                      className="text-left text-foreground hover:text-burgundy-700 transition-colors duration-300 font-medium text-lg py-3 border-b border-amber-200"
+                      aria-label={`Navigate to ${item.label} section`}
+                    >
+                      {item.label}
+                    </button>
+                  );
+                })}
                 
                 {/* Mobile Breadcrumb */}
               </nav>
