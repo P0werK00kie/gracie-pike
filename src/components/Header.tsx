@@ -14,12 +14,17 @@ const Header = () => {
     { label: 'Shop', href: 'https://shop.graciepike.com' },
     { label: 'About', href: '/about' },
     { label: 'Events', href: '/events' },
-    { label: 'Contact / Book', href: '/contact' }
+    { label: 'Contact / Book', href: '/contact' },
+    { label: 'Donate To This Ministry', href: 'https://donate.stripe.com/5kQdR8dOC2lQ7S77Ls9MY00' }
   ];
 
   const handleNavigation = (href: string) => {
     // Handle page navigation
-    window.location.href = href;
+    if (href.startsWith('http')) {
+      window.open(href, '_blank', 'noopener,noreferrer');
+    } else {
+      window.location.href = href;
+    }
     setIsMenuOpen(false);
   };
 
