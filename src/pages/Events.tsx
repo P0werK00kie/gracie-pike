@@ -232,6 +232,7 @@ END:VCALENDAR`;
                       </button>
                     </DialogTrigger>
                     <DialogContent className="max-w-6xl w-full h-[85vh] p-0">
+                    <DialogContent className="max-w-6xl w-full h-[85vh] p-0 gap-0">
                       <DialogHeader className="sr-only">
                         <DialogTitle>Upload Event Photos & Videos</DialogTitle>
                         <DialogDescription>
