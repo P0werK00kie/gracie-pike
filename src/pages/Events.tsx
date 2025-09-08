@@ -5,6 +5,7 @@ import MetaTags from '@/components/SEO/MetaTags';
 import OptimizedImage from '@/components/SEO/ImageOptimization';
 import { useState } from 'react';
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogDescription, DialogTrigger } from '@/components/ui/dialog';
+import { Upload } from 'lucide-react';
 
 interface EventDate {
   date: string;
@@ -47,6 +48,7 @@ interface Event {
 const Events = () => {
   // Sample events data - this would typically come from a database or API
   const [isRsvpModalOpen, setIsRsvpModalOpen] = useState(false);
+  const [isUploadModalOpen, setIsUploadModalOpen] = useState(false);
 
   const events: Event[] = [
     {
@@ -216,6 +218,48 @@ END:VCALENDAR`;
                   Join Gracie Pike for concerts, inspiring workshops, and special events that celebrate 
                   the power of faith-driven music and community.
                 </p>
+                
+                {/* Photo/Video Upload Button */}
+                <div className="mt-8">
+                  <Dialog open={isUploadModalOpen} onOpenChange={setIsUploadModalOpen}>
+                    <DialogTrigger asChild>
+                      <button
+                        className="bg-amber-600 text-background px-8 py-4 font-medium hover:bg-amber-700 transition-colors duration-300 shadow-lg hover:shadow-xl flex items-center space-x-3 tracking-wide mx-auto"
+                        aria-label="Upload photos and videos from the latest event"
+                      >
+                        <Upload className="w-5 h-5" />
+                        <span>Upload Event Photos & Videos</span>
+                      </button>
+                    </DialogTrigger>
+                    <DialogContent className="max-w-6xl w-full h-[85vh] p-0">
+                      <DialogHeader className="sr-only">
+                        <DialogTitle>Upload Event Photos & Videos</DialogTitle>
+                        <DialogDescription>
+                          Share your photos and videos from the latest event with Gracie Pike.
+                        </DialogDescription>
+                      </DialogHeader>
+                      <div className="w-full h-full">
+                        <iframe
+                          src="https://api.leadconnectorhq.com/widget/form/fJVyO4wzV9ToYJ29RccP"
+                          style={{width:'100%',height:'100%',border:'none',borderRadius:'3px'}}
+                          id="inline-fJVyO4wzV9ToYJ29RccP" 
+                          data-layout="{'id':'INLINE'}"
+                          data-trigger-type="alwaysShow"
+                          data-trigger-value=""
+                          data-activation-type="alwaysActivated"
+                          data-activation-value=""
+                          data-deactivation-type="neverDeactivate"
+                          data-deactivation-value=""
+                          data-form-name="File Upload"
+                          data-height="432"
+                          data-layout-iframe-id="inline-fJVyO4wzV9ToYJ29RccP"
+                          data-form-id="fJVyO4wzV9ToYJ29RccP"
+                          title="File Upload"
+                        />
+                      </div>
+                    </DialogContent>
+                  </Dialog>
+                </div>
               </div>
             </div>
           </section>
