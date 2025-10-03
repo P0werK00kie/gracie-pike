@@ -57,6 +57,11 @@ const ContactPage = () => {
     setIsContactSubmitting(true);
 
     try {
+      if (!supabase) {
+        toast.error('Database connection not available. Please try again later.');
+        return;
+      }
+
       const submission: Omit<GraciePikeContactSubmission, 'id' | 'created_at' | 'updated_at'> = {
         name: contactFormData.name.trim(),
         email: contactFormData.email.trim(),
@@ -138,6 +143,11 @@ const ContactPage = () => {
     setIsBookingSubmitting(true);
 
     try {
+      if (!supabase) {
+        toast.error('Database connection not available. Please try again later.');
+        return;
+      }
+
       const submission: Omit<ShowBookingSubmission, 'id' | 'created_at'> = {
         full_name: bookingFormData.full_name.trim(),
         phone_number: bookingFormData.phone_number.trim(),

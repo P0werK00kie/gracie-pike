@@ -18,6 +18,39 @@ const Hero = () => {
       
       {/* Main Content */}
       <div className="container mx-auto px-6 pt-32 pb-20 relative z-10">
+        {/* New Album Announcement */}
+        <div className="mb-16 animate-elegant-entrance">
+          <div className="bg-gradient-to-r from-amber-50 via-burgundy-50 to-amber-50 border-2 border-amber-300 luxury-shadow rounded-sm p-8 md:p-10 max-w-4xl mx-auto">
+            <div className="flex flex-col md:flex-row items-center gap-8">
+              <div className="flex-shrink-0">
+                <div className="w-32 h-32 md:w-40 md:h-40 bg-gradient-to-br from-burgundy-100 to-amber-100 border-2 border-amber-400 overflow-hidden">
+                  <OptimizedImage
+                    src="https://i.scdn.co/image/ab67616d0000b2730dd37e96b98133fb1f6bed3c"
+                    alt="Here I am - Latest album by Gracie Pike"
+                    title="Here I am Album Cover"
+                    className="w-full h-full object-cover"
+                    width={160}
+                    height={160}
+                    loading="eager"
+                  />
+                </div>
+              </div>
+              <div className="flex-1 text-center md:text-left">
+                <p className="text-amber-700 font-medium tracking-wider text-sm mb-2">NEW RELEASE</p>
+                <h2 className="text-3xl md:text-4xl font-display font-bold text-burgundy-900 mb-3">Here I am</h2>
+                <p className="text-muted-foreground mb-6">Gracie's latest album is now available</p>
+                <button
+                  onClick={() => window.open('https://shop.graciepike.com/product-details/product/68b8a2ed8eef1b1b55a67ff3', '_blank')}
+                  className="bg-burgundy-900 text-background px-8 py-3 font-medium hover:bg-burgundy-800 transition-all duration-300 shadow-lg hover:shadow-xl tracking-wide"
+                  aria-label="Buy Here I am album by Gracie Pike"
+                >
+                  Buy Now
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
         <div className="grid lg:grid-cols-2 gap-16 items-center min-h-[80vh]">
           {/* Left Content */}
           <div className="space-y-8 animate-elegant-entrance">
