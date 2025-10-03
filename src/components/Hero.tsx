@@ -40,7 +40,7 @@ const Hero = () => {
                 <h2 className="text-3xl md:text-4xl font-display font-bold text-burgundy-900 mb-3">Here I am</h2>
                 <p className="text-muted-foreground mb-6">Gracie's latest album is now available</p>
                 <button
-                  onClick={() => window.open('https://shop.graciepike.com', '_blank')}
+                  onClick={() => window.open('https://shop.graciepike.com/product-details/product/68b8a2ed8eef1b1b55a67ff3', '_blank')}
                   className="bg-burgundy-900 text-background px-8 py-3 font-medium hover:bg-burgundy-800 transition-all duration-300 shadow-lg hover:shadow-xl tracking-wide"
                   aria-label="Buy Here I am album by Gracie Pike"
                 >
