@@ -25,9 +25,9 @@ const Hero = () => {
               <div className="flex-shrink-0">
                 <div className="w-32 h-32 md:w-40 md:h-40 bg-gradient-to-br from-burgundy-100 to-amber-100 border-2 border-amber-400 overflow-hidden">
                   <OptimizedImage
-                    src="https://i.scdn.co/image/ab67616d0000b2730dd37e96b98133fb1f6bed3c"
-                    alt="Here I am - Latest album by Gracie Pike"
-                    title="Here I am Album Cover"
+                    src="https://wbuiebxqdjuxhvdtiata.supabase.co/storage/v1/object/sign/gracie-pike/Hero/front%20cover2%202.jpg?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV9jMjU3NzlmNC01ZjdjLTRjZWEtYmM2MS1mYjMwZjllNzkxM2EiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJncmFjaWUtcGlrZS9IZXJvL2Zyb250IGNvdmVyMiAyLmpwZyIsImlhdCI6MTc2MTc1MzQyOSwiZXhwIjoyMzkyNDczNDI5fQ.dl0cECUMUyUx00JnD9dvh8Me1ZFThuS_hQbdqEE79rg"
+                    alt="Christmas Melody - Latest album by Gracie Pike"
+                    title="Christmas Melody Cover"
                     className="w-full h-full object-cover"
                     width={160}
                     height={160}
@@ -37,12 +37,12 @@ const Hero = () => {
               </div>
               <div className="flex-1 text-center md:text-left">
                 <p className="text-amber-700 font-medium tracking-wider text-sm mb-2">NEW RELEASE</p>
-                <h2 className="text-3xl md:text-4xl font-display font-bold text-burgundy-900 mb-3">Here I am</h2>
-                <p className="text-muted-foreground mb-6">Gracie's latest album is now available</p>
+                <h2 className="text-3xl md:text-4xl font-display font-bold text-burgundy-900 mb-3">Christmas Melody</h2>
+                <p className="text-muted-foreground mb-6">Gracie's latest album is now available for pre-order</p>
                 <button
                   onClick={() => window.open('https://shop.graciepike.com/product-details/product/68b8a2ed8eef1b1b55a67ff3', '_blank')}
                   className="bg-burgundy-900 text-background px-8 py-3 font-medium hover:bg-burgundy-800 transition-all duration-300 shadow-lg hover:shadow-xl tracking-wide"
-                  aria-label="Buy Here I am album by Gracie Pike"
+                  aria-label="Buy Christmas Melody by Gracie Pike"
                 >
                   Buy Now
                 </button>
